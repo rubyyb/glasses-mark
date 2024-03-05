@@ -8,13 +8,49 @@
     <link rel="stylesheet" href="css/glasses.css">
     <link rel="stylesheet" href="css/glasses.scss">
 
+    <script src="./lib/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src=""></script>
-    <script>
+
+    <script >
         $(function(){
             // 링크방지
             $('a').click(function(e){
                 e.preventDefault();
+            })
+
+            // 스크립트 시작
+            // header
+            let depth01 = $('.pc_gnb .depth01');
+            let depth02 = $('.pc_gnb .depth02');
+
+            depth01.mouseenter(function(){
+                $(this).children().stop().slideDown();
+            })
+            depth01.mouseleave(function(){
+                depth02.stop().slideUp();
+            })//2차 메뉴
+
+            //프리미엄 아이웨어
+
+            //새로운 소식
+            let news = document.querySelector('.news');
+            let newsItem = document.querySelectorAll('.news .list .item');
+            
+            let newTop = news.offsetTop;
+
+            window.addEventListener('scroll', () => {
+                let scrollBar = window.scrollY;
+                //console.log(scrollBar);
+
+                if(newTop <= scrollBar) {
+                    newsItem.forEach((item, index) => {
+                        item.classList.add('on' + index, 'active');
+                    })
+                } else if (scrollBar === 0) {
+                    newsItem.forEach((item, index) => {
+                        item.classList.remove('on' + index, 'active');
+                    })
+                }
             })
         })/* script end */
     </script>
@@ -228,39 +264,47 @@
             <section class="glasses_menu">
                 <div class="list">
                     <div class="item">
-                        <figure>
-                            <img src="img/3.section-프리미엄.png" alt="프리미엄">
-                        </figure>
-                        <div>
-                            <h3>프리미엄 아이웨어</h3>
-                        </div>
+                        <a href="#">
+                            <figure>
+                                <img src="img/3.section-프리미엄.png" alt="프리미엄">
+                            </figure>
+                            <div class="on">
+                                <h3>프리미엄 아이웨어</h3>
+                            </div>
+                        </a>
                     </div><!-- item -->
 
                     <div class="item">
-                        <figure>
-                            <img src="img/3.section-안경.png" alt="안경테">
-                        </figure>
-                        <div>
-                            <h3>안경테</h3>
-                        </div>
+                        <a href="#">
+                            <figure>
+                                <img src="img/3.section-안경.png" alt="안경테">
+                            </figure>
+                            <div>
+                                <h3>안경테</h3>
+                            </div>
+                        </a>
                     </div><!-- item -->
 
                     <div class="item">
-                        <figure>
-                            <img src="img/3.-1section-선글라스.png" alt="선글라스">
-                        </figure>
-                        <div>
-                            <h3>선글라스</h3>
-                        </div>
+                        <a href="#">
+                            <figure>
+                                <img src="img/3.-1section-선글라스.png" alt="선글라스">
+                            </figure>
+                            <div>
+                                <h3>선글라스</h3>
+                            </div>
+                        </a>
                     </div><!-- item -->
 
                     <div class="item">
-                        <figure>
-                            <img src="img/3.section-렌즈.png" alt="렌즈">
-                        </figure>
-                        <div>
-                            <h3>렌즈</h3>
-                        </div>
+                        <a href="#">
+                            <figure>
+                                <img src="img/3.section-렌즈.png" alt="렌즈">
+                            </figure>
+                            <div>
+                                <h3>렌즈</h3>
+                            </div>
+                        </a>
                     </div><!-- item -->
                 </div><!-- list end -->
 

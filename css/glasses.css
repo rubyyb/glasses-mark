@@ -75,6 +75,8 @@ html, body {
 .header .inner .header_menu .pc_gnb .gnb .depth01 .depth02 {
   width: 12rem;
   height: 14rem;
+  padding: 10px;
+  color: #fff;
   text-align: center;
   position: absolute;
   top: 60px;
@@ -182,6 +184,11 @@ html, body {
 .main .glasses_menu .list .item {
   position: relative;
 }
+.main .glasses_menu .list .item:hover div {
+  color: #fff;
+  border: 1px solid var(--color-orange);
+  background-color: var(--color-orange);
+}
 .main .glasses_menu .list .item figure {
   height: 819px;
 }
@@ -202,6 +209,7 @@ html, body {
   left: 50%;
   transform: translate(-50%, -50%);
   border: 1px solid #333;
+  transition: all 1s;
 }
 .main .glasses_menu .list .item div h3 {
   font-weight: bold;
@@ -319,6 +327,7 @@ html, body {
 }
 .main .news .inner .title {
   position: relative;
+  margin-top: 100px;
   padding-top: 5rem;
   margin-bottom: var(--tilte-margin-bottom);
 }
@@ -357,6 +366,7 @@ html, body {
 }
 .main .news .inner .list .item {
   width: 32.57%;
+  opacity: 0;
 }
 .main .news .inner .list .item figure {
   height: 346px;
@@ -366,6 +376,18 @@ html, body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.main .news .inner .list .item.active {
+  opacity: 1;
+}
+.main .news .inner .list .item.on0 {
+  transition: 1s;
+}
+.main .news .inner .list .item.on1 {
+  transition: 1s 0.7s;
+}
+.main .news .inner .list .item.on2 {
+  transition: 1s 1.4s;
 }
 .main .news .inner .list p {
   margin-top: 4rem;
