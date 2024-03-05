@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="css/glasses.scss">
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src=""></script>
+    <script>
+        $(function(){
+            // 링크방지
+            $('a').click(function(e){
+                e.preventDefault();
+            })
+        })/* script end */
+    </script>
+    
 </head>
 <body>
     <div id="wrap">
@@ -22,7 +32,7 @@
                 
                 <div class="header_menu">
                     <nav class="pc pc_gnb">
-                        <ul class="pc">
+                        <ul class="gnb">
                             <li class="depth01">
                                 <a href="#">으뜸 Story</a>
                                 <ul class="depth02">
@@ -69,7 +79,7 @@
                     </nav><!-- pc_gnb end -->
 
                     <nav class="mobile mobile_gnb">
-                        <ul class="mobile">
+                        <ul class="gnb">
                             <li class="depth01">
                                 <a href="#">으뜸 Story</a>
                                 <ul class="depth02">
@@ -463,7 +473,7 @@
                     </div><!-- title end -->
 
                     <div class="pc list">
-                        <div class="swiper hot_silde">
+                        <div class="swiper hot_slide">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <a href="#">
@@ -473,7 +483,6 @@
                                         <div class="text">
                                             <h5>티.일렉트</h5>
                                             <h6><span>티.일렉트 빅 105 (5 Color)</span></h6>
-                                            <p>178,000원</p>
                                             <div>
                                                 <h7><span>58%</span></h7>
                                                 <h8>75,000원</h8>
@@ -481,7 +490,7 @@
                                         </div><!-- text end -->
                                         <div class="pc icon">
                                             <button>SALE</button>
-                                            <button>BEST</button>
+                                            <button class="best">BEST</button>
                                         </div><!-- icon -->
                                     </a>
                                 </div><!-- swiper-slide end -->
@@ -494,7 +503,6 @@
                                         <div class="text">
                                             <h5>투다</h5>
                                             <h6><span>투다 22 (5 Color)</span></h6>
-                                            <p>85,000원</p>
                                             <div>
                                                 <h7><span>78%</span></h7>
                                                 <h8>19,000원</h8>
@@ -514,7 +522,6 @@
                                         <div class="text">
                                             <h5>버금 8603</h5>
                                             <h6><span>버금 8603 (4 Color)</span></h6>
-                                            <p>128,000원</p>
                                             <div>
                                                 <h7><span>80%</span></h7>
                                                 <h8>25,000원</h8>
@@ -534,7 +541,6 @@
                                         <div class="text">
                                             <h5>키위안경</h5>
                                             <h6><span>키위안경 K803 (6 Color)</span></h6>
-                                            <p>128,000원</p>
                                             <div>
                                                 <h7><span>62%</span></h7>
                                                 <h8>49,000원</h8>
@@ -554,7 +560,6 @@
                                         <div class="text">
                                             <h5>크랍시스</h5>
                                             <h6><span>크랍시스 CRF-143 (4 Color)</span></h6>
-                                            <p>590,000원</p>
                                             <div>
                                                 <h7><span>39%</span></h7>
                                                 <h8>360,000원</h8>
@@ -574,7 +579,6 @@
                                         <div class="text">
                                             <h5>크랍시스</h5>
                                             <h6><span>크랍시스 CRF-147</span></h6>
-                                            <p>590,000원</p>
                                             <div>
                                                 <h7><span>39%</span></h7>
                                                 <h8>360,000원</h8>
@@ -594,7 +598,6 @@
                                         <div class="text">
                                             <h5>디렉터</h5>
                                             <h6><span>디렉터 10 선글라스 2452</span></h6>
-                                            <p>225,000원</p>
                                             <div>
                                                 <h7><span>74%</span></h7>
                                                 <h8>59,000원</h8>
@@ -614,7 +617,6 @@
                                         <div class="text">
                                             <h5>트루몬드</h5>
                                             <h6><span>트루몬드 7002 (4 Color)</span></h6>
-                                            <p>285,000원</p>
                                             <div>
                                                 <h7><span>60%</span></h7>
                                                 <h8>115,000원</h8>
@@ -634,7 +636,6 @@
                                         <div class="text">
                                             <h5>에일라 울템 1002</h5>
                                             <h6><span>에일라 울템 1002 (4 Color)</span></h6>
-                                            <p>148,000원</p>
                                             <div>
                                                 <h7><span>78%</span></h7>
                                                 <h8>33,000원</h8>
@@ -654,7 +655,6 @@
                                         <div class="text">
                                             <h5>케이트켈리</h5>
                                             <h6><span>케이트켈리 6018 (3 Color)</span></h6>
-                                            <p>165,000원</p>
                                             <div>
                                                 <h7><span>73%</span></h7>
                                                 <h8>45,000원</h8>
@@ -715,7 +715,7 @@
             <section class="news">
                 <div class="inner">
                     <div class="title">
-                        <p>n  e  w  s</p>
+                        <p>N  E  W  S</p>
                         <h4><strong>으뜸50안경 소식을 한눈에 확인하세요!</strong></h4>
                         <div class="pc icon">
                             <p>MORE</p>
@@ -728,21 +728,21 @@
                     <div class="pc list">
                         <div class="item">
                             <figure>
-                                <img src="img/main_visual03.jpg" alt="">
+                                <img src="img/1.main_visual_3.jpg" alt="연탄나눔">
                             </figure>
                             <p>[으뜸50소식] 2023년 으뜸50안경 사랑의 연탄나눔</p>
                         </div><!-- item end -->
 
                         <div class="item">
                             <figure>
-                                <img src="img/4.section- 자립지원금.jpg" alt="">
+                                <img src="img/4.section- 자립지원금.jpg" alt="자립지원금">
                             </figure>
                             <p>[으뜸50소식] 춘천점 자립청소년 기부금 후원</p>
                         </div><!-- item end -->
 
                         <div class="item">
                             <figure>
-                                <img src="img/4.section-춘천점 따뜻한 마음.jpg" alt="">
+                                <img src="img/4.section-춘천점 따뜻한 마음.jpg" alt="따뜻한 마음">
                             </figure>
                             <p>[으뜸50소식] 으뜸50안경 춘천점에서 따뜻한 마음을 전달했습니다.</p>
                         </div><!-- item end -->
@@ -768,34 +768,38 @@
                 </div><!-- footer01 end -->
 
                 <div class="footer02">
-                    <ul>
-                        <li><span>주식회사으뜸50안경</span></li>
-                        <li>대표이사 : 정영길</li>
-                        <li>사업자등록번호 : 582-81-00802</li>
-                        <li>통신판매업신고 : 2020-서울용산-1712</li>
-                        <li>주소 : 서울시 용상구 원효로 271, 5층</li>
-                        <li>메일 : top50optical@naver.com</li>
-                    </ul>
-                </div><!-- footer02 end -->
+                    <div class="left">
+                        <ul>
+                            <li><span>주식회사으뜸50안경</span></li>
+                            <li>대표이사 : 정영길</li>
+                            <li>사업자등록번호 : 582-81-00802</li>
+                            <li>통신판매업신고 : 2020-서울용산-1712</li>
+                            <li>주소 : 서울시 용상구 원효로 271, 5층</li>
+                            <li>메일 : top50optical@naver.com</li>
+                        </ul>
+                    </div><!-- left end -->
+                    <div class="pc center">
+                        <ul>
+                            <li>문의전화</li>
+                            <li><a href="#">1522-1584</a></li>
+                            <li>1:1 문의</li>
+                            <li>자주찾는질문 FAQ</li>
+                        </ul>
+                    </div><!-- center end -->
+                    <div class="pc right">
+                        <ul>
+                            <li>으뜸50소식</li>
+                            <li>- 으뜸50안경 사랑의 연탄나눔</li>
+                            <li>- 춘천점 자립청소년 기부금 후원</li>
+                            <li>- 으뜸50안경 안경광학과 장학금 후원</li>
+                            <li>- 대구동서로점 기초생활 보호 대상자 지원</li>
+                        </ul>
+                    </div><!-- right end -->
+                </div><!-- footer02 -->
 
-                <div class="pc footer03">
-                    <ul>
-                        <li>문의전화</li>
-                        <li><a href="#">1522-1584</a></li>
-                        <li>1:1 문의</li>
-                        <li>자주찾는질문 FAQ</li>
-                    </ul>
-                </div><!-- footer03 end -->
-
-                <div class="pc footer04">
-                    <ul>
-                        <li>으뜸50소식</li>
-                        <li>- 으뜸50안경 사랑의 연탄나눔</li>
-                        <li>- 춘천점 자립청소년 기부금 후원</li>
-                        <li>- 으뜸50안경 안경광학과 장학금 후원</li>
-                        <li>- 대구동서로점 기초생활 보호 대상자 지원</li>
-                    </ul>
-                </div><!-- footer04 end -->
+                <div class="footer03">
+                    <p>copyright © 2024 ruby, all right reserved.</p>
+                </div>
             </div><!-- inner end -->
         </footer><!-- footer end -->
     </div><!-- wrap end -->
@@ -817,8 +821,8 @@
         });
 
         var swiper = new Swiper(".hot_slide", {
-            slidesPerView: 3,
-            spaceBetween: 30,
+            slidesPerView: 4,
+            spaceBetween: 60,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
