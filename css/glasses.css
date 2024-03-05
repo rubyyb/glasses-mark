@@ -69,6 +69,9 @@ html, body {
   position: relative;
   /* depth02 end */
 }
+.header .inner .header_menu .pc_gnb .gnb .depth01:hover .depth02 {
+  display: block;
+}
 .header .inner .header_menu .pc_gnb .gnb .depth01 > a {
   font-size: 2rem;
 }
@@ -121,7 +124,7 @@ html, body {
   /* swiper-slide */
 }
 .main .main_visual .mySwiper .swiper-slide {
-  height: 819px;
+  height: 43.65vw;
 }
 .main .main_visual .mySwiper .swiper-slide img {
   width: 100%;
@@ -134,7 +137,7 @@ html, body {
 }
 .main .main_visual .mySwiper .swiper-pagination-bullet {
   border-radius: 0;
-  width: 20px;
+  width: 60px;
 }
 .main .main_visual .mySwiper .swiper-pagination-bullet-active {
   background-color: var(--color-orange);
@@ -161,8 +164,7 @@ html, body {
   margin-top: 3rem;
 }
 .main .style .inner .list .swiper-slide {
-  width: 220px;
-  height: 220px;
+  width: 15.71%;
 }
 .main .style .inner .list .swiper-slide > a img {
   width: 100%;
@@ -194,7 +196,7 @@ html, body {
   transition: 0.5s;
 }
 .main .glasses_menu .list .item figure {
-  height: 819px;
+  height: 43.65vw;
   overflow: hidden;
 }
 .main .glasses_menu .list .item figure img {
@@ -204,7 +206,7 @@ html, body {
      object-fit: cover;
 }
 .main .glasses_menu .list .item div {
-  width: 200px;
+  width: 49.5%;
   padding: 1.2rem 0;
   display: block;
   text-align: center;
@@ -220,6 +222,7 @@ html, body {
   font-weight: bold;
 }
 .main .hot .inner {
+  margin-bottom: 0;
   /* title */
   /* hot_silde */
 }
@@ -260,7 +263,7 @@ html, body {
   /* swiper-slide */
 }
 .main .hot .inner .hot_slide .swiper-wrapper {
-  height: 450px;
+  height: 33.14vw;
 }
 .main .hot .inner .hot_slide .swiper-slide {
   /* figure */
@@ -268,8 +271,7 @@ html, body {
   /* icon */
 }
 .main .hot .inner .hot_slide .swiper-slide figure {
-  width: 300px;
-  height: 300px;
+  height: 18.2vw;
   border: 1px solid #333;
 }
 .main .hot .inner .hot_slide .swiper-slide figure img {
@@ -327,13 +329,14 @@ html, body {
   /* inner */
 }
 .main .news .inner {
+  margin-top: 0;
   /* title */
   /* list */
 }
 .main .news .inner .title {
   position: relative;
-  margin-top: 100px;
-  padding-top: 5rem;
+  margin-top: 0;
+  padding-top: 15rem;
   margin-bottom: var(--tilte-margin-bottom);
 }
 .main .news .inner .title p {
@@ -374,7 +377,7 @@ html, body {
   opacity: 0;
 }
 .main .news .inner .list .item figure {
-  height: 346px;
+  height: 24.71vw;
 }
 .main .news .inner .list .item figure img {
   width: 100%;
@@ -433,10 +436,10 @@ html, body {
   margin-right: 2.2rem;
 }
 .footer .inner .footer02 {
-  width: 50%;
   margin: 28px 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 40px;
   font-size: 1.3rem;
 }
 .footer .inner .footer02 li:nth-child(1) {
@@ -459,4 +462,36 @@ html, body {
   font-size: 1.3rem;
 }
 
-/* footer *//*# sourceMappingURL=glasses.css.map */
+/* footer */
+@media screen and (max-width: 1240px) {
+  .header {
+    height: 70px;
+  }
+  .header .inner h1 {
+    height: 3.8rem;
+  }
+  .main .main_visual {
+    margin-top: 70px;
+  }
+  .header .inner .header_menu .pc_gnb .gnb .depth01 > a {
+    font-size: 1.6rem;
+  }
+  .header .inner .header_menu .pc_gnb .gnb .depth01 .depth02 {
+    top: 43px;
+  }
+  .header .inner .util button {
+    width: 20px;
+  }
+  .main .glasses_menu .list .item div {
+    font-size: 1.6rem;
+  }
+  .main .hot .inner .title h4 {
+    font-size: 2.5rem;
+  }
+  .main .news .inner .title h4 {
+    font-size: 2.5rem;
+  }
+  .main .news .inner .list p {
+    font-size: 1.8rem;
+  }
+} /* 1440px *//*# sourceMappingURL=glasses.css.map */

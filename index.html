@@ -20,15 +20,17 @@
 
             // 스크립트 시작
             // header
-            let depth01 = $('.pc_gnb .depth01');
-            let depth02 = $('.pc_gnb .depth02');
-
-            depth01.mouseenter(function(){
-                $(this).children().stop().slideDown();
-            })
-            depth01.mouseleave(function(){
-                depth02.stop().slideUp();
-            })//2차 메뉴
+            // $('.header .pc_gnb .depth01 > a').mouseenter(function(){
+            //     if($(this).next().css('display') === 'none') {
+            //         //alert();
+            //         $('.pc_gnb .depth02').slideUp();
+            //         $(this).next().slideDown();
+            //         $(this).addClass('on');
+            //     } else {
+            //         $(this).next().slideUp();
+            //         $('.pc_gnb .depth02').removeClass('on');  
+            //     }
+            // })
 
             //프리미엄 아이웨어
 
@@ -53,7 +55,7 @@
                 }
             })// news
 
-            
+
         })/* script end */
     </script>
     
