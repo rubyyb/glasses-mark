@@ -156,12 +156,14 @@ html,body {font-size: 62.5%;}
     }/* style */
 
     .glasses_menu {
-        max-width: 1920px;
+        max-width: 100vw;
         // width: calc(100% / 4);
         margin: 0 auto;
         .list {
             display: flex;
             .item {
+                position: relative;
+                width: calc(100% / 4);
                 &:hover div {
                     color: #fff;
                     border: 1px solid var(--color-orange);
@@ -171,7 +173,6 @@ html,body {font-size: 62.5%;}
                     transform: scale(1.2);
                     transition: 0.5s;
                 }
-                position: relative;
                 figure {
                     margin-top: 10rem;
                     height: 100vh;
@@ -203,7 +204,6 @@ html,body {font-size: 62.5%;}
     }/* glasses_menu */
 
     .hot .inner {
-        margin-bottom: 0;
         .title {
             position: relative;
             margin-bottom: 6rem;
@@ -237,12 +237,11 @@ html,body {font-size: 62.5%;}
             }/* div */
         }/* title */
         .hot_slide {
-            .swiper-wrapper {
-                height: 33.14vw;
-            }
+            position: inherit;
+            .hot_bar {bottom: -60px;}
             .swiper-slide {
                 figure{
-                    height: 18.2vw;
+                    height: 18vw;
                     border: 1px solid #333;
                     img {
                         width: 100%;
@@ -305,7 +304,7 @@ html,body {font-size: 62.5%;}
             .title {
                 position: relative;
                 margin-top: 0;
-                padding-top: 15rem;
+                padding-top: 10rem;
                 margin-bottom: var(--tilte-margin-bottom);
                 p {
                     font-size: var(--font-en);
@@ -428,16 +427,232 @@ html,body {font-size: 62.5%;}
     .main .main_visual .mySwiper .swiper-slide {padding-top: 7rem;}
     .main .style {margin: 0;}
     .main .glasses_menu .list .item div {font-size: 1.6rem;}
+    .main .glasses_menu .list .item figure {height: 70vh;}
     .main .hot .inner .title h4 {font-size: 2.5rem;}
     .main .news .inner .title h4 {font-size: 2.5rem;}
     .main .news .inner .list p {font-size: 1.8rem;}
+    .main .news::before {height: 28.50vh;}
 }/* 1240px */
 
 @media screen and (max-width:960px) {
     .header .inner .header_menu .pc_gnb .gnb {gap: 2rem;}
     .main .glasses_menu .list .item div h3 {word-break: keep-all;}
+    .main .main_visual .mySwiper .swiper-slide {height: 50vh;}
+    .main .glasses_menu .list {flex-wrap: wrap;}
+    .main .glasses_menu .list .item {
+        height: 50vh;
+        overflow: hidden;
+    }
+    .main .glasses_menu .list .item figure {
+        margin-top: 0;
+        height: 50vh;
+    }
+    .main .glasses_menu .list .item{width: 50vw;}
+    .main .news::before {height: 22.5vh;}
 }/* 960px */
 
-@media screen and (max-wudth:800px) {
-    
-}
+@media screen and (max-width:767px) {
+    .pc{display: none !important;}
+    .mobile {display: block;}
+    br {display: none;}
+    .inner {
+        max-width: 767px;
+        width: calc(100% - 30px);
+        margin-top: 5rem auto;
+    }
+    .header {max-width: 767px;}
+    .header_menu .mobile_gnb{
+        width: 50%;
+        height: 100%;
+        background-color: var(--color-orange);
+        color: #fff;
+        padding: 50px;
+        position: fixed;
+        top: 70px;
+        right: 0;
+        display: none;
+        .depth01{
+            position: relative;
+            &> a {
+                font-size: 2rem;
+                font-weight: 500;
+                &::before {
+                    content: '';
+                    width: 100%;
+                    height: 1px;
+                    background-color: #fff;
+                    position: absolute;
+                    top: 30px;
+                    left: 0;
+                }
+            }
+            .depth02 {
+                font-size: 1.5rem;
+                padding: 20px 0;
+
+            }
+        }
+    }/* header_menu .mobile_gnb */
+
+    .glasses_menu .mobile {
+        h5 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: bold;
+        }
+        .tab_menu {
+            font-size: 1.5rem;
+            ul {
+                display: flex;
+                gap: 1.8rem;
+                margin-bottom: 26px;
+                li.on {text-decoration: underline;}
+            }
+        }/* tab_menu */
+        .mobile_list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+            display: none;
+            &.on {display: flex;}
+            .item {
+                width: 48%;
+                figure {
+                    height: 40vh;
+                    border: 1px solid #a6a6a6;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                div {
+                    height: 13.39vh;
+                    margin-top: 15px;
+                    position: relative;
+                    h6 {
+                        font-size: 1.8rem;
+                    }
+                    .pay {
+                        position: absolute;
+                        bottom: -65px;
+                        left: 0;
+                        p {
+                            color: #cccccc;
+                            font-size: 16px;
+                            margin-bottom: 5px;
+                        }
+                        h8 {
+                            font-size: 1.8rem;
+                            font-weight: 800;
+                        }
+                    }
+                }
+            }/* item */
+        }/* list */
+        button {
+            width: 100%;
+            margin-top: 25px;
+            a {
+                width: 18.19vw;
+                height: 5.21vh;
+                line-height: 5.21vh;
+                border: 1px solid #333;
+                border-radius: 30px;
+                display: inline-block;
+                text-align: center;
+                font-size: 1.6rem;
+            }
+        }
+    }/* glasses_menu .mobile */
+    .main .hot .inner .title {margin-bottom: 3rem;}
+    .main .hot .inner .title p {margin-bottom: 1.5rem;}
+    .mobile_hot {
+        width: 100%;
+        figure {
+            height: 52.15vh;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .list {
+            display: flex;
+            gap: 13px;
+            margin-top: 2rem;
+            .mobile_item {
+                width: 48%;
+                figure {
+                    height: 40vh;
+                    border: 1px solid #a6a6a6;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .text {
+                    margin-top: 2rem;
+                    h5 {font-size: 1.6rem;}
+                    h6 {
+                        margin: 8px 0;
+                        font-size: 1.8rem;
+                    }
+                    p {
+                        color: #cccccc;
+                        margin-top: 25px;
+                        font-size: 1.6rem;
+                    }
+                    div {
+                        margin-top: 5px;
+                        display: flex;
+                        font-size: 1.8rem;
+                        font-weight: bold;
+                        h7 {
+                            margin-right: 5px;
+                            color: var(--color-orange);
+                        }
+                    }
+                }
+            }/* mobile_item */
+        }/* list */
+        button {
+            width: 100%;
+            margin-top: 5rem;
+            a {
+                width: 18.19vw;
+                height: 5.21vh;
+                line-height: 5.21vh;
+                border: 1px solid #333;
+                border-radius: 30px;
+                display: inline-block;
+                text-align: center;
+                font-size: 1.6rem;
+            }
+        }
+    }/* mobile_hot */
+
+    .main .news .inner .title {padding: 0;}
+    .main .news .inner .title {margin-bottom: 3rem;}
+    .main .news .inner .title p {margin-bottom: 1.5rem;}
+    .main .news::before {display: none;}
+    .main .news .inner {margin-bottom: 7rem;}
+    .mobile_img {
+        width: 100%;;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .footer {
+        padding-top: 0;
+        .footer01 {
+            border-top: 1px solid #333;
+            ul {
+                padding-top: 20px;
+            }
+        }
+    }
+}/* 767px */

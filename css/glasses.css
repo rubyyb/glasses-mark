@@ -116,7 +116,7 @@ html, body {
   /* news */
 }
 .main .main_visual {
-  max-width: 1920px;
+  max-width: 100vw;
   margin: 0 auto;
   /* mySwiper */
 }
@@ -177,7 +177,7 @@ html, body {
   display: none;
 }
 .main .glasses_menu {
-  max-width: 1920px;
+  max-width: 100vw;
   margin: 0 auto;
   /* list */
 }
@@ -186,6 +186,7 @@ html, body {
 }
 .main .glasses_menu .list .item {
   position: relative;
+  width: 25%;
 }
 .main .glasses_menu .list .item:hover div {
   color: #fff;
@@ -197,7 +198,7 @@ html, body {
   transition: 0.5s;
 }
 .main .glasses_menu .list .item figure {
-  padding-top: 10rem;
+  margin-top: 10rem;
   height: 100vh;
   overflow: hidden;
 }
@@ -224,7 +225,6 @@ html, body {
   font-weight: bold;
 }
 .main .hot .inner {
-  margin-bottom: 0;
   /* title */
   /* hot_silde */
 }
@@ -262,10 +262,11 @@ html, body {
      object-fit: cover;
 }
 .main .hot .inner .hot_slide {
+  position: inherit;
   /* swiper-slide */
 }
-.main .hot .inner .hot_slide .swiper-wrapper {
-  height: 33.14vw;
+.main .hot .inner .hot_slide .hot_bar {
+  bottom: -60px;
 }
 .main .hot .inner .hot_slide .swiper-slide {
   /* figure */
@@ -273,7 +274,7 @@ html, body {
   /* icon */
 }
 .main .hot .inner .hot_slide .swiper-slide figure {
-  height: 18.2vw;
+  height: 18vw;
   border: 1px solid #333;
 }
 .main .hot .inner .hot_slide .swiper-slide figure img {
@@ -338,7 +339,7 @@ html, body {
 .main .news .inner .title {
   position: relative;
   margin-top: 0;
-  padding-top: 15rem;
+  padding-top: 10rem;
   margin-bottom: var(--tilte-margin-bottom);
 }
 .main .news .inner .title p {
@@ -482,7 +483,7 @@ html, body {
     width: 20px;
   }
   .main .glasses_menu .list .item figure {
-    padding-top: 7rem;
+    margin-top: 7rem;
   }
   .main .main_visual .mySwiper .swiper-slide {
     padding-top: 7rem;
@@ -493,6 +494,9 @@ html, body {
   .main .glasses_menu .list .item div {
     font-size: 1.6rem;
   }
+  .main .glasses_menu .list .item figure {
+    height: 70vh;
+  }
   .main .hot .inner .title h4 {
     font-size: 2.5rem;
   }
@@ -502,6 +506,9 @@ html, body {
   .main .news .inner .list p {
     font-size: 1.8rem;
   }
+  .main .news::before {
+    height: 28.5vh;
+  }
 } /* 1240px */
 @media screen and (max-width: 960px) {
   .header .inner .header_menu .pc_gnb .gnb {
@@ -510,4 +517,266 @@ html, body {
   .main .glasses_menu .list .item div h3 {
     word-break: keep-all;
   }
-} /* 960px *//*# sourceMappingURL=glasses.css.map */
+  .main .main_visual .mySwiper .swiper-slide {
+    height: 50vh;
+  }
+  .main .glasses_menu .list {
+    flex-wrap: wrap;
+  }
+  .main .glasses_menu .list .item {
+    height: 50vh;
+    overflow: hidden;
+  }
+  .main .glasses_menu .list .item figure {
+    margin-top: 0;
+    height: 50vh;
+  }
+  .main .glasses_menu .list .item {
+    width: 50vw;
+  }
+  .main .news::before {
+    height: 22.5vh;
+  }
+} /* 960px */
+@media screen and (max-width: 767px) {
+  .pc {
+    display: none !important;
+  }
+  .mobile {
+    display: block;
+  }
+  br {
+    display: none;
+  }
+  .inner {
+    max-width: 767px;
+    width: calc(100% - 30px);
+    margin-top: 5rem auto;
+  }
+  .header {
+    max-width: 767px;
+  }
+  .header_menu .mobile_gnb {
+    width: 50%;
+    height: 100%;
+    background-color: var(--color-orange);
+    color: #fff;
+    padding: 50px;
+    position: fixed;
+    top: 70px;
+    right: 0;
+    display: none;
+  }
+  .header_menu .mobile_gnb .depth01 {
+    position: relative;
+  }
+  .header_menu .mobile_gnb .depth01 > a {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .header_menu .mobile_gnb .depth01 > a::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    top: 30px;
+    left: 0;
+  }
+  .header_menu .mobile_gnb .depth01 .depth02 {
+    font-size: 1.5rem;
+    padding: 20px 0;
+  }
+  /* header_menu .mobile_gnb */
+  .glasses_menu .mobile {
+    /* tab_menu */
+    /* list */
+  }
+  .glasses_menu .mobile h5 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+  .glasses_menu .mobile .tab_menu {
+    font-size: 1.5rem;
+  }
+  .glasses_menu .mobile .tab_menu ul {
+    display: flex;
+    gap: 1.8rem;
+    margin-bottom: 26px;
+  }
+  .glasses_menu .mobile .tab_menu ul li.on {
+    text-decoration: underline;
+  }
+  .glasses_menu .mobile .mobile_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    display: none;
+    /* item */
+  }
+  .glasses_menu .mobile .mobile_list.on {
+    display: flex;
+  }
+  .glasses_menu .mobile .mobile_list .item {
+    width: 48%;
+  }
+  .glasses_menu .mobile .mobile_list .item figure {
+    height: 40vh;
+    border: 1px solid #a6a6a6;
+  }
+  .glasses_menu .mobile .mobile_list .item figure img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .glasses_menu .mobile .mobile_list .item div {
+    height: 13.39vh;
+    margin-top: 15px;
+    position: relative;
+  }
+  .glasses_menu .mobile .mobile_list .item div h6 {
+    font-size: 1.8rem;
+  }
+  .glasses_menu .mobile .mobile_list .item div .pay {
+    position: absolute;
+    bottom: -65px;
+    left: 0;
+  }
+  .glasses_menu .mobile .mobile_list .item div .pay p {
+    color: #cccccc;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .glasses_menu .mobile .mobile_list .item div .pay h8 {
+    font-size: 1.8rem;
+    font-weight: 800;
+  }
+  .glasses_menu .mobile button {
+    width: 100%;
+    margin-top: 25px;
+  }
+  .glasses_menu .mobile button a {
+    width: 18.19vw;
+    height: 5.21vh;
+    line-height: 5.21vh;
+    border: 1px solid #333;
+    border-radius: 30px;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+  /* glasses_menu .mobile */
+  .main .hot .inner .title {
+    margin-bottom: 3rem;
+  }
+  .main .hot .inner .title p {
+    margin-bottom: 1.5rem;
+  }
+  .mobile_hot {
+    width: 100%;
+    /* list */
+  }
+  .mobile_hot figure {
+    height: 52.15vh;
+  }
+  .mobile_hot figure img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .mobile_hot .list {
+    display: flex;
+    gap: 13px;
+    margin-top: 2rem;
+    /* mobile_item */
+  }
+  .mobile_hot .list .mobile_item {
+    width: 48%;
+  }
+  .mobile_hot .list .mobile_item figure {
+    height: 40vh;
+    border: 1px solid #a6a6a6;
+  }
+  .mobile_hot .list .mobile_item figure img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .mobile_hot .list .mobile_item .text {
+    margin-top: 2rem;
+  }
+  .mobile_hot .list .mobile_item .text h5 {
+    font-size: 1.6rem;
+  }
+  .mobile_hot .list .mobile_item .text h6 {
+    margin: 8px 0;
+    font-size: 1.8rem;
+  }
+  .mobile_hot .list .mobile_item .text p {
+    color: #cccccc;
+    margin-top: 25px;
+    font-size: 1.6rem;
+  }
+  .mobile_hot .list .mobile_item .text div {
+    margin-top: 5px;
+    display: flex;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  .mobile_hot .list .mobile_item .text div h7 {
+    margin-right: 5px;
+    color: var(--color-orange);
+  }
+  .mobile_hot button {
+    width: 100%;
+    margin-top: 5rem;
+  }
+  .mobile_hot button a {
+    width: 18.19vw;
+    height: 5.21vh;
+    line-height: 5.21vh;
+    border: 1px solid #333;
+    border-radius: 30px;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+  /* mobile_hot */
+  .main .news .inner .title {
+    padding: 0;
+  }
+  .main .news .inner .title {
+    margin-bottom: 3rem;
+  }
+  .main .news .inner .title p {
+    margin-bottom: 1.5rem;
+  }
+  .main .news::before {
+    display: none;
+  }
+  .main .news .inner {
+    margin-bottom: 7rem;
+  }
+  .mobile_img {
+    width: 100%;
+  }
+  .mobile_img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .footer {
+    padding-top: 0;
+  }
+  .footer .footer01 {
+    border-top: 1px solid #333;
+  }
+  .footer .footer01 ul {
+    padding-top: 20px;
+  }
+} /* 767px *//*# sourceMappingURL=glasses.css.map */
