@@ -23,6 +23,7 @@
 
 html,body {font-size: 62.5%;}
 .mobile {display: none;}
+.style_list_767 {display: none;}
 
 .inner {
     max-width: 1400px;
@@ -493,7 +494,11 @@ html,body {font-size: 62.5%;}
             }
         }
     }/* header_menu .mobile_gnb */
-
+    .style .inner {
+        margin: 8rem auto;
+        .style_list {display: none;}
+        .style_list_767 {display: block;}
+    }
     .glasses_menu .mobile {
         h5 {
             font-size: 2rem;
@@ -511,6 +516,7 @@ html,body {font-size: 62.5%;}
         }/* tab_menu */
         .mobile_list {
             display: flex;
+            justify-content: space-between;
             flex-wrap: wrap;
             gap: 13px;
             display: none;
@@ -541,6 +547,7 @@ html,body {font-size: 62.5%;}
                             color: #cccccc;
                             font-size: 16px;
                             margin-bottom: 5px;
+                            text-decoration: line-through;
                         }
                         h8 {
                             font-size: 1.8rem;
@@ -579,6 +586,7 @@ html,body {font-size: 62.5%;}
         }
         .list {
             display: flex;
+            justify-content: space-between;
             gap: 13px;
             margin-top: 2rem;
             .mobile_item {
@@ -603,6 +611,7 @@ html,body {font-size: 62.5%;}
                         color: #cccccc;
                         margin-top: 25px;
                         font-size: 1.6rem;
+                        text-decoration: line-through;
                     }
                     div {
                         margin-top: 5px;
@@ -656,3 +665,56 @@ html,body {font-size: 62.5%;}
         }
     }
 }/* 767px */
+
+@media screen and (max-width:480px) {
+    br {display: block;}
+    .inner {
+        margin: 5rem auto;
+    }
+    .header .inner {
+        justify-content: center;
+    }
+    .mobile_btn {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+    }
+    .header .inner h1 {
+        height: 3.5vh;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .main .main_visual .mySwiper .swiper-slide {
+        height: 70.75vh;
+    }
+    .style .inner {margin: 2.5rem auto;}
+    .main .style .inner .title h2 {
+        font-size: 1.7rem;
+        margin-right: 5px;
+    }
+    .main .style .inner .title a {
+        width: 10px;
+        height: 18px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .glasses_menu .mobile .mobile_list .item figure {height: 25.33vh;}
+    .glasses_menu .mobile .mobile_list .item div h6 {font-size: 1.4rem;}
+    .glasses_menu .mobile .mobile_list .item div .pay p {font-size: 1.3rem;}
+    .glasses_menu .mobile button a {width: 29.16vw;}
+    .main .hot .inner .title p {display: none;}
+    .main .hot .inner .title h4 {font-size: 2rem;}
+    .mobile_hot figure {height: 41.66vh;}
+    .mobile_hot .list .mobile_item figure {height: 25.33vh}
+    .mobile_hot button a {width: 29.16vw;}
+    .mobile_hot button {margin-top: 2.5rem;}
+    .main .news .inner .title h4 {font-size: 2rem;}
+    .main .news .inner .title {margin-bottom: 2rem;}
+}

@@ -23,6 +23,10 @@ html, body {
   display: none;
 }
 
+.style_list_767 {
+  display: none;
+}
+
 .inner {
   max-width: 1400px;
   width: calc(100% - 40px);
@@ -588,6 +592,15 @@ html, body {
     padding: 20px 0;
   }
   /* header_menu .mobile_gnb */
+  .style .inner {
+    margin: 8rem auto;
+  }
+  .style .inner .style_list {
+    display: none;
+  }
+  .style .inner .style_list_767 {
+    display: block;
+  }
   .glasses_menu .mobile {
     /* tab_menu */
     /* list */
@@ -610,6 +623,7 @@ html, body {
   }
   .glasses_menu .mobile .mobile_list {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 13px;
     display: none;
@@ -648,6 +662,7 @@ html, body {
     color: #cccccc;
     font-size: 16px;
     margin-bottom: 5px;
+    text-decoration: line-through;
   }
   .glasses_menu .mobile .mobile_list .item div .pay h8 {
     font-size: 1.8rem;
@@ -689,6 +704,7 @@ html, body {
   }
   .mobile_hot .list {
     display: flex;
+    justify-content: space-between;
     gap: 13px;
     margin-top: 2rem;
     /* mobile_item */
@@ -720,6 +736,7 @@ html, body {
     color: #cccccc;
     margin-top: 25px;
     font-size: 1.6rem;
+    text-decoration: line-through;
   }
   .mobile_hot .list .mobile_item .text div {
     margin-top: 5px;
@@ -779,4 +796,86 @@ html, body {
   .footer .footer01 ul {
     padding-top: 20px;
   }
-} /* 767px *//*# sourceMappingURL=glasses.css.map */
+} /* 767px */
+@media screen and (max-width: 480px) {
+  br {
+    display: block;
+  }
+  .inner {
+    margin: 5rem auto;
+  }
+  .header .inner {
+    justify-content: center;
+  }
+  .mobile_btn {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+  }
+  .header .inner h1 {
+    height: 3.5vh;
+  }
+  .header .inner h1 img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .main .main_visual .mySwiper .swiper-slide {
+    height: 70.75vh;
+  }
+  .style .inner {
+    margin: 2.5rem auto;
+  }
+  .main .style .inner .title h2 {
+    font-size: 1.7rem;
+    margin-right: 5px;
+  }
+  .main .style .inner .title a {
+    width: 10px;
+    height: 18px;
+  }
+  .main .style .inner .title a img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .glasses_menu .mobile .mobile_list .item figure {
+    height: 25.33vh;
+  }
+  .glasses_menu .mobile .mobile_list .item div h6 {
+    font-size: 1.4rem;
+  }
+  .glasses_menu .mobile .mobile_list .item div .pay p {
+    font-size: 1.3rem;
+  }
+  .glasses_menu .mobile button a {
+    width: 29.16vw;
+  }
+  .main .hot .inner .title p {
+    display: none;
+  }
+  .main .hot .inner .title h4 {
+    font-size: 2rem;
+  }
+  .mobile_hot figure {
+    height: 41.66vh;
+  }
+  .mobile_hot .list .mobile_item figure {
+    height: 25.33vh;
+  }
+  .mobile_hot button a {
+    width: 29.16vw;
+  }
+  .mobile_hot button {
+    margin-top: 2.5rem;
+  }
+  .main .news .inner .title h4 {
+    font-size: 2rem;
+  }
+  .main .news .inner .title {
+    margin-bottom: 2rem;
+  }
+}/*# sourceMappingURL=glasses.css.map */
