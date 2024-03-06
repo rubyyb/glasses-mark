@@ -455,7 +455,7 @@ html,body {font-size: 62.5%;}
 @media screen and (max-width:767px) {
     .pc{display: none !important;}
     .pc767 {display: block !important;}
-    .mobile-767 {display: none;}
+    .mobile-767 {display: none !important;}
     .mobile {display: block;}
     br {display: none;}
     .inner {
