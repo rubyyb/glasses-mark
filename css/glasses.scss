@@ -689,7 +689,7 @@ html,body {font-size: 62.5%;}
         }
     }
     .main .main_visual .mySwiper .swiper-slide {
-        height: 70.75vh;
+        height: 62.75vh;
     }
     .style .inner {margin: 2.5rem auto;}
     .main .style .inner .title h2 {
@@ -717,4 +717,14 @@ html,body {font-size: 62.5%;}
     .mobile_hot button {margin-top: 2.5rem;}
     .main .news .inner .title h4 {font-size: 2rem;}
     .main .news .inner .title {margin-bottom: 2rem;}
+}
+
+@media screen and (max-width:414px) {
+    .mobile_hot figure {height: 21.66vh;}
+    .glasses_menu .mobile .mobile_list .item figure {height: 20.33vh;}
+    .mobile_hot .list .mobile_item figure {height: 20.33vh;}
+    .mobile_hot .list .mobile_item .text h5 {font-size: 1.2rem;}
+    .mobile_hot .list .mobile_item .text h6 {font-size: 1.4rem;}
+    .mobile_hot .list .mobile_item .text p {font-size: 1.2rem;}
+    .mobile_hot .list .mobile_item .text div {font-size: 1.4rem;}
 }

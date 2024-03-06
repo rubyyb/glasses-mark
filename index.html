@@ -185,11 +185,37 @@
         <div id="fullpage">
             <main class="main" id="main">
                 <section class="section main_visual">
-                    <div class="swiper mySwiper">
+                    <div class="swiper mySwiper pc">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <a href="#">
                                     <img src="img/1.main_visual_1.png" alt="메인비주얼">
+                                </a>
+                            </div><!-- swiper-slide -->
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="img/1.main_visual_4.png" alt="메인비주얼">
+                                </a>
+                            </div><!-- swiper-slide -->
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="img/1.main_visual_3.jpg" alt="메인비주얼">
+                                </a>
+                            </div><!-- swiper-slide -->
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="img/1.main_visual_4.png" alt="메인비주얼">
+                                </a>
+                            </div><!-- swiper-slide -->
+                        </div><!-- swiper-wrapper  -->
+                        <div class="swiper-pagination main_visual_bar"></div>
+                    </div><!-- swiper end -->
+
+                    <div class="swiper mySwiper mobile">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="img/mobile_main_visual.png" alt="메인비주얼">
                                 </a>
                             </div><!-- swiper-slide -->
                             <div class="swiper-slide">
@@ -901,7 +927,7 @@
 
         var swiper = new Swiper(".style_list", {
             slidesPerView: 6,
-            spaceBetween: 16,
+            spaceBetween: 14,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
