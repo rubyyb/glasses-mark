@@ -22,19 +22,24 @@
 
             // 스크립트 시작
             // header
-            // $('.header .pc_gnb .depth01 > a').mouseenter(function(){
-            //     if($(this).next().css('display') === 'none') {
-            //         //alert();
-            //         $('.pc_gnb .depth02').slideUp();
-            //         $(this).next().slideDown();
-            //         $(this).addClass('on');
-            //     } else {
-            //         $(this).next().slideUp();
-            //         $('.pc_gnb .depth02').removeClass('on');  
-            //     }
-            // })
+                let nav = document.querySelector('.header .mobile_gnb')
+                let openBtn = document.querySelector('.header .mobile_btn')
 
-            //프리미엄 아이웨어
+                openBtn.addEventListener('click', () => {
+                    nav.classList.toggle('on');
+                })
+
+            //프리미엄 아이웨어 탭메뉴
+            let mobileMenu = $('.glasses_menu .inner .tab_menu li');
+            let mobileList = $('.glasses_menu .inner .mobile_list');
+
+            mobileMenu.click(function(){
+                mobileMenu.removeClass('on');
+                $(this).addClass('on');
+
+                mobileList.removeClass('on');
+                mobileList.eq($(this).index()).addClass('on');
+            })
 
             //새로운 소식
             let news = document.querySelector('.news');
@@ -185,7 +190,7 @@
         <div id="fullpage">
             <main class="main" id="main">
                 <section class="section main_visual">
-                    <div class="swiper mySwiper pc">
+                    <div class="swiper mySwiper pc pc767">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <a href="#">
@@ -211,7 +216,7 @@
                         <div class="swiper-pagination main_visual_bar"></div>
                     </div><!-- swiper end -->
 
-                    <div class="swiper mySwiper mobile">
+                    <div class="swiper mySwiper mobile mobile-767">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <a href="#">

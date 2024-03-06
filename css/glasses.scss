@@ -454,6 +454,8 @@ html,body {font-size: 62.5%;}
 
 @media screen and (max-width:767px) {
     .pc{display: none !important;}
+    .pc767 {display: block !important;}
+    .mobile-767 {display: none !important;}
     .mobile {display: block;}
     br {display: none;}
     .inner {
@@ -472,25 +474,28 @@ html,body {font-size: 62.5%;}
         top: 70px;
         right: 0;
         display: none;
+        &.on {display: block;}
         .depth01{
             position: relative;
             &> a {
+                display: block;
                 font-size: 2rem;
                 font-weight: 500;
+                margin-bottom: 2rem;
                 &::before {
                     content: '';
                     width: 100%;
                     height: 1px;
                     background-color: #fff;
                     position: absolute;
-                    top: 30px;
+                    top: 37px;
                     left: 0;
                 }
             }
             .depth02 {
                 font-size: 1.5rem;
-                padding: 20px 0;
-
+                padding-bottom: 20px;
+                display: none;
             }
         }
     }/* header_menu .mobile_gnb */
@@ -667,6 +672,9 @@ html,body {font-size: 62.5%;}
 }/* 767px */
 
 @media screen and (max-width:480px) {
+    .pc767 {display: none;}
+    .mobile-767 {display: none;}
+    .mobile {display:block;}
     br {display: block;}
     .inner {
         margin: 5rem auto;

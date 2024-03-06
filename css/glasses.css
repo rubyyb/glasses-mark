@@ -546,6 +546,12 @@ html, body {
   .pc {
     display: none !important;
   }
+  .pc767 {
+    display: block !important;
+  }
+  .mobile-767 {
+    display: none !important;
+  }
   .mobile {
     display: block;
   }
@@ -571,12 +577,17 @@ html, body {
     right: 0;
     display: none;
   }
+  .header_menu .mobile_gnb.on {
+    display: block;
+  }
   .header_menu .mobile_gnb .depth01 {
     position: relative;
   }
   .header_menu .mobile_gnb .depth01 > a {
+    display: block;
     font-size: 2rem;
     font-weight: 500;
+    margin-bottom: 2rem;
   }
   .header_menu .mobile_gnb .depth01 > a::before {
     content: "";
@@ -584,12 +595,13 @@ html, body {
     height: 1px;
     background-color: #fff;
     position: absolute;
-    top: 30px;
+    top: 37px;
     left: 0;
   }
   .header_menu .mobile_gnb .depth01 .depth02 {
     font-size: 1.5rem;
-    padding: 20px 0;
+    padding-bottom: 20px;
+    display: none;
   }
   /* header_menu .mobile_gnb */
   .style .inner {
@@ -798,6 +810,15 @@ html, body {
   }
 } /* 767px */
 @media screen and (max-width: 480px) {
+  .pc767 {
+    display: none;
+  }
+  .mobile-767 {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
   br {
     display: block;
   }
