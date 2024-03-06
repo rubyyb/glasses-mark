@@ -455,7 +455,7 @@ html,body {font-size: 62.5%;}
 @media screen and (max-width:767px) {
     .pc{display: none !important;}
     .pc767 {display: block !important;}
-    .mobile-767 {display: none !important;}
+    .mobile-767 {display: none;}
     .mobile {display: block;}
     br {display: none;}
     .inner {
@@ -672,8 +672,7 @@ html,body {font-size: 62.5%;}
 }/* 767px */
 
 @media screen and (max-width:480px) {
-    .pc767 {display: none;}
-    .mobile-767 {display: none;}
+    .pc767 {display: none !important;}
     .mobile {display:block;}
     br {display: block;}
     .inner {
@@ -725,9 +724,12 @@ html,body {font-size: 62.5%;}
     .mobile_hot button {margin-top: 2.5rem;}
     .main .news .inner .title h4 {font-size: 2rem;}
     .main .news .inner .title {margin-bottom: 2rem;}
+    .header_menu .mobile_gnb {padding: 50px 20px;}
 }
 
 @media screen and (max-width:414px) {
+    .pc767 {display: none;}
+    .mobile {display:block;}
     .mobile_hot figure {height: 21.66vh;}
     .glasses_menu .mobile .mobile_list .item figure {height: 20.33vh;}
     .mobile_hot .list .mobile_item figure {height: 20.33vh;}

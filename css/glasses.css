@@ -550,7 +550,7 @@ html, body {
     display: block !important;
   }
   .mobile-767 {
-    display: none !important;
+    display: none;
   }
   .mobile {
     display: block;
@@ -811,10 +811,7 @@ html, body {
 } /* 767px */
 @media screen and (max-width: 480px) {
   .pc767 {
-    display: none;
-  }
-  .mobile-767 {
-    display: none;
+    display: none !important;
   }
   .mobile {
     display: block;
@@ -899,8 +896,17 @@ html, body {
   .main .news .inner .title {
     margin-bottom: 2rem;
   }
+  .header_menu .mobile_gnb {
+    padding: 50px 20px;
+  }
 }
 @media screen and (max-width: 414px) {
+  .pc767 {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
   .mobile_hot figure {
     height: 21.66vh;
   }
