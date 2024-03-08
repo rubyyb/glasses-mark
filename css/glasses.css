@@ -865,22 +865,25 @@ html, body {
   .main .main_visual .mySwiper .swiper-slide {
     height: 62.75vh;
   }
-  .style .inner {
+  .main .style .style_inner {
     margin: 2.5rem auto;
   }
-  .main .style .inner .title h2 {
+  .main .style .style_inner .title h2 {
     font-size: 1.7rem;
     margin-right: 5px;
   }
-  .main .style .inner .title a {
+  .main .style .style_inner .title a {
     width: 10px;
     height: 18px;
   }
-  .main .style .inner .title a img {
+  .main .style .style_inner .title a img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .main .style .style_inner .list .swiper-slide {
+    width: 30%;
   }
   .glasses_menu .mobile .mobile_list .item figure {
     height: 25.33vh;
