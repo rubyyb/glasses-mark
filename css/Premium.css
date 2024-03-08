@@ -117,13 +117,27 @@ html, body {
   top: 100px;
   left: 0;
 }
-.premium_text .filter .brand {
-  padding: 20px 0;
+.premium_text .filter .list {
+  display: flex;
 }
-.premium_text .filter .brand h4 {
-  font-size: 1.4rem;
+.premium_text .filter .list .item {
+  padding: 20px 0;
+  margin-left: 20px;
+  width: 20%;
+  border-right: 1px solid #a6a6a6;
+}
+.premium_text .filter .list .item h4 {
+  font-size: 1.6rem;
   font-weight: bold;
   margin-bottom: 20px;
+}
+.premium_text .filter .list .item ul li {
+  font-size: 1.6rem;
+  padding: 5px 0;
+}
+.premium_text .filter .list .item ul li input {
+  width: 14px;
+  height: 14px;
 }
 
 .premium_glasses_list {

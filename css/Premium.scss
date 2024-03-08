@@ -108,12 +108,28 @@ html,body {font-size: 62.5%;}
                 left: 0;
             }
         }/* filter_title */
-        .brand {
-            padding: 20px 0;
-            h4 {
-                font-size: 1.4rem;
-                font-weight: bold;
-                margin-bottom: 20px;
+        .list {
+            display: flex;
+            .item {
+                padding: 20px 0;
+                margin-left: 20px;
+                width: calc(100% / 5);
+                border-right: 1px solid #a6a6a6;
+                h4 {
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    margin-bottom: 20px;
+                }
+                ul {
+                    li {
+                        font-size: 1.6rem;
+                        padding: 5px 0;
+                        input {
+                            width: 14px;
+                            height: 14px;
+                        }
+                    }
+                }
             }
         }
     }/* filter */
