@@ -1,5 +1,7 @@
 @charset "utf-8";
 @import url('reset.css');
+@import url('common.css');
+@import url('common.scss');
 
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
@@ -31,76 +33,6 @@ html,body {font-size: 62.5%;}
     width: calc(100% - 40px);
     margin: 10rem auto;
 }
-
-.header {
-    width: 100%;
-    height: var(--header-height);
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #ffffff73;
-    z-index: 9999;
-    .inner {
-        height: 100%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        h1 {
-            height: 4.8rem;
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }/* h1 */
-        .header_menu .pc_gnb .gnb {
-            display: flex;
-            justify-content: space-between;
-            gap: 5rem;
-            align-items: center;
-            .depth01 {
-                position: relative;
-                &:hover .depth02 {
-                    display: block;
-                }
-                > a {
-                    font-size: 2rem;
-                }
-                .depth02 {
-                    width: 12rem;
-                    height: 14rem;
-                    padding: 10px;
-                    color: #fff;
-                    text-align: center;
-                    position: absolute;
-                    top: 60px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    font-size: var(--font-en);
-                    background-color: var(--color-orange);
-                    display: none;
-                    li {
-                        margin-bottom: 10px;
-                        word-break: keep-all;
-                    }
-                }/* depth02 end */
-            }/* depth01 end */
-        }/* header_menu */
-        .util {
-            display: flex;
-            gap: 2rem;
-            button {
-                width: 25px;
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }   
-        }/* util */
-    }/* inner end */
-}/* header end */
 
 .main {
     .main_visual {
@@ -388,55 +320,8 @@ html,body {font-size: 62.5%;}
     }/* news */
 }/* main */
 
-.footer {
-    padding: 20px 0;
-    .inner {
-        margin: 0 auto;
-        .footer01 {
-            border-bottom: 1px solid #474242;
-            ul {
-                display: flex;
-                font-size: 1.3rem;
-                margin-bottom: 20px;
-                li {
-                    margin-right: 2.2rem;
-                }
-            }
-        }/* footer01 */
-        .footer02 {
-            margin: 28px 0;
-            display: flex;
-            justify-content: flex-start;
-            gap: 40px;
-            font-size: 1.3rem;
-            li:nth-child(1) {
-                font-size: var(--font-en);
-                font-weight: bold;
-                margin-bottom: 10px;
-            }
-            li {
-                margin-bottom: 5px;
-            }
-            .left span {
-                color: var(--color-orange);
-            }
-            .center li:nth-child(2) {
-                font-weight: bold;
-                font-size: var(--font-en);
-                margin: 20px 0;
-            }
-        }/* footer02 */
-        .footer03 p {font-size: 1.3rem;}
-    }/* inner */
-}/* footer */
-
 @media screen and (max-width:1240px) {
     .mobile-767 {display: none;}
-    .header {height: 70px;}
-    .header .inner h1 {height: 3.8rem;}
-    .header .inner .header_menu .pc_gnb .gnb .depth01 > a {font-size: 1.6rem;}
-    .header .inner .header_menu .pc_gnb .gnb .depth01 .depth02 {top: 43px;}
-    .header .inner .util button {width: 20px;}
     .main .glasses_menu .list .item figure {margin-top: 7rem;}
     .main .main_visual .mySwiper .swiper-slide {padding-top: 7rem;}
     .main .style {margin: 0;}
@@ -449,7 +334,7 @@ html,body {font-size: 62.5%;}
 }/* 1240px */
 
 @media screen and (max-width:960px) {
-    .header .inner .header_menu .pc_gnb .gnb {gap: 2rem;}
+
     .main .glasses_menu .list .item div h3 {word-break: keep-all;}
     .main .main_visual .mySwiper .swiper-slide {height: 50vh;}
     .main .glasses_menu .list {flex-wrap: wrap;}
@@ -477,42 +362,6 @@ html,body {font-size: 62.5%;}
         width: calc(100% - 30px);
         margin-top: 5rem auto;
     }
-    .header {max-width: 767px;}
-    .header_menu .mobile_gnb{
-        width: 50%;
-        height: 100%;
-        background-color: var(--color-orange);
-        color: #fff;
-        padding: 50px;
-        position: fixed;
-        top: 70px;
-        right: 0;
-        display: none;
-        &.on {display: block;}
-        .depth01{
-            position: relative;
-            &> a {
-                display: block;
-                font-size: 2rem;
-                font-weight: 500;
-                margin-bottom: 2rem;
-                &::before {
-                    content: '';
-                    width: 100%;
-                    height: 1px;
-                    background-color: #fff;
-                    position: absolute;
-                    top: 37px;
-                    left: 0;
-                }
-            }
-            .depth02 {
-                font-size: 1.5rem;
-                padding-bottom: 20px;
-                display: none;
-            }
-        }
-    }/* header_menu .mobile_gnb */
     .style .inner {
         margin: 8rem auto;
         .style_list {display: none;}
@@ -674,15 +523,6 @@ html,body {font-size: 62.5%;}
             object-fit: cover;
         }
     }
-    .footer {
-        padding-top: 0;
-        .footer01 {
-            border-top: 1px solid #333;
-            ul {
-                padding-top: 20px;
-            }
-        }
-    }
 }/* 767px */
 
 @media screen and (max-width:480px) {
@@ -693,23 +533,7 @@ html,body {font-size: 62.5%;}
     .inner {
         margin: 5rem auto;
     }
-    .header .inner {
-        justify-content: center;
-    }
-    .mobile_btn {
-        position: absolute;
-        top: 50%;
-        right: 15px;
-        transform: translateY(-50%);
-    }
-    .header .inner h1 {
-        height: 3.5vh;
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
+
     .main .main_visual .mySwiper .swiper-slide {
         height: 62.75vh;
     }
@@ -740,8 +564,7 @@ html,body {font-size: 62.5%;}
     .mobile_hot button {margin-top: 2.5rem;}
     .main .news .inner .title h4 {font-size: 2rem;}
     .main .news .inner .title {margin-bottom: 2rem;}
-    .header_menu .mobile_gnb {padding: 50px 20px;}
-}
+}/* 480px */
 
 @media screen and (max-width:414px) {
     .pc767 {display: none;}
