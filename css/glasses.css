@@ -550,7 +550,7 @@ html, body {
     display: block !important;
   }
   .mobile-767 {
-    display: none;
+    display: none !important;
   }
   .mobile {
     display: block;
@@ -815,6 +815,9 @@ html, body {
   }
   .mobile {
     display: block;
+  }
+  .mobile-767 {
+    display: block !important;
   }
   br {
     display: block;

@@ -674,6 +674,7 @@ html,body {font-size: 62.5%;}
 @media screen and (max-width:480px) {
     .pc767 {display: none !important;}
     .mobile {display:block;}
+    .mobile-767 {display: block !important;}
     br {display: block;}
     .inner {
         margin: 5rem auto;
