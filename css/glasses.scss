@@ -23,7 +23,10 @@
     --color-orange : #f27249;
 }
 
-html,body {font-size: 62.5%;}
+html,body {
+    font-size: 62.5%;
+    font-family: 'Nanum Gothic', sans-serif;
+}
 .mobile {display: none;}
 .mobile-767 {display: none;}
 .style_list_767 {display: none;}
