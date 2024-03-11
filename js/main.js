@@ -1,7 +1,9 @@
 $(function(){
     // 링크방지
     $('a').click(function(e){
-        e.preventDefault();
+         if($(this).attr("href") == "#") {
+            e.preventDefault();
+         }
     })
 
     // 스크립트 시작
