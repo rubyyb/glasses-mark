@@ -10,10 +10,24 @@ $(function(){
     // header
         let nav = document.querySelector('.header .mobile_gnb');
         let openBtn = document.querySelector('.header .mobile_btn');
+        let depth01 = document.querySelectorAll('.pc_gnb .depth01 > a');
+        let depth02 = document.querySelectorAll('.pc_gnb .depth02');
 
         openBtn.addEventListener('click', () => {
             nav.classList.toggle('on');
         })
+        for(let i = 0; i < depth01.length; i++) {
+            depth01[i].addEventListener('click', () => {
+                if(getComputedStyle(depth01[i].nextElementSibling).display === 'none') {
+                    depth02.forEach((item) => {
+                        item.classList.remove('on');
+                    })
+                    depth01[i].nextElementSibling.classList.add('on');
+                } else {
+                    depth01[i].nextElementSibling.classList.remove('on');
+                }
+            })
+        }
 
 
     //프리미엄 아이웨어 탭메뉴

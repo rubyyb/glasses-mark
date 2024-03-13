@@ -39,9 +39,6 @@
   position: relative;
   /* depth02 end */
 }
-.header .inner .header_menu .pc_gnb .gnb .depth01:hover .depth02 {
-  display: block;
-}
 .header .inner .header_menu .pc_gnb .gnb .depth01 > a {
   font-size: 2rem;
 }
@@ -58,6 +55,9 @@
   font-size: var(--font-en);
   background-color: var(--color-orange);
   display: none;
+}
+.header .inner .header_menu .pc_gnb .gnb .depth01 .depth02.on {
+  display: block;
 }
 .header .inner .header_menu .pc_gnb .gnb .depth01 .depth02 li {
   margin-bottom: 10px;

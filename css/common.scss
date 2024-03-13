@@ -30,9 +30,6 @@
             align-items: center;
             .depth01 {
                 position: relative;
-                &:hover .depth02 {
-                    display: block;
-                }
                 > a {
                     font-size: 2rem;
                 }
@@ -49,6 +46,9 @@
                     font-size: var(--font-en);
                     background-color: var(--color-orange);
                     display: none;
+                    &.on {
+                        display: block;
+                    }
                     li {
                         margin-bottom: 10px;
                         word-break: keep-all;
