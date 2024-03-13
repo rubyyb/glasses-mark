@@ -17,52 +17,52 @@
   --color-orange: #f27249;
 }
 
-.premium_main_visual {
+.glasses_main_visual {
   margin: var(--header-height) auto;
   width: 100%;
 }
-.premium_main_visual img {
+.glasses_main_visual img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.premium_menu .premium_menu_list {
+.glasses_menu .glasses_menu_list {
   margin: 0 auto;
 }
-.premium_menu .premium_menu_list .list {
+.glasses_menu .glasses_menu_list .list {
   display: flex;
   justify-content: center;
   gap: 28px;
 }
-.premium_menu .premium_menu_list .list .item {
+.glasses_menu .glasses_menu_list .list .item {
   width: 7.5%;
 }
-.premium_menu .premium_menu_list .list .item figure {
+.glasses_menu .glasses_menu_list .list .item figure {
   border-radius: 50%;
 }
-.premium_menu .premium_menu_list .list .item figure:hover {
+.glasses_menu .glasses_menu_list .list .item figure:hover {
   border: 1px solid #333;
   transition: all 5s 0.1s;
 }
-.premium_menu .premium_menu_list .list .item img {
+.glasses_menu .glasses_menu_list .list .item img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.premium_menu .premium_menu_list .list .item p {
+.glasses_menu .glasses_menu_list .list .item p {
   margin-top: 8px;
   font-size: 1.4rem;
   text-align: center;
 }
 
-.premium_text {
+.glasses_text {
   position: relative;
   /* filter */
 }
-.premium_text .title {
+.glasses_text .title {
   max-width: 1400px;
   width: calc(100% - 40px);
   margin: 0 auto;
@@ -70,23 +70,23 @@
   font-weight: bold;
   margin-bottom: 2rem;
 }
-.premium_text .filter {
+.glasses_text .filter {
   /* filter_title */
 }
-.premium_text .filter .filter_title {
+.glasses_text .filter .filter_title {
   max-width: 1400px;
   width: calc(100% - 40px);
   margin: 0 auto;
   padding: 15px 0;
   font-size: 1.8rem;
 }
-.premium_text .filter .filter_title button {
+.glasses_text .filter .filter_title button {
   width: 66px;
   height: 28px;
   background-color: #333;
   color: #fff;
 }
-.premium_text .filter .filter_title::before {
+.glasses_text .filter .filter_title::before {
   content: "";
   width: 100%;
   height: 1px;
@@ -95,7 +95,7 @@
   top: 41px;
   left: 0;
 }
-.premium_text .filter .filter_title::after {
+.glasses_text .filter .filter_title::after {
   content: "";
   width: 100%;
   height: 1px;
@@ -104,18 +104,18 @@
   top: 100px;
   left: 0;
 }
-.premium_text .filter .list {
+.glasses_text .filter .list {
   display: none;
   /* list end */
 }
-.premium_text .filter .list.on {
+.glasses_text .filter .list.on {
   display: block;
 }
-.premium_text .filter .list .list_item {
+.glasses_text .filter .list .list_item {
   display: flex;
   justify-content: center;
 }
-.premium_text .filter .list .list_item::after {
+.glasses_text .filter .list .list_item::after {
   content: "";
   width: 100%;
   height: 1px;
@@ -124,7 +124,7 @@
   bottom: 95px;
   left: 0;
 }
-.premium_text .filter .list .list_item::before {
+.glasses_text .filter .list .list_item::before {
   content: "";
   width: 100%;
   height: 1px;
@@ -133,100 +133,104 @@
   bottom: 0;
   left: 0;
 }
-.premium_text .filter .list .list_item .item {
+.glasses_text .filter .list .list_item .item {
   padding: 20px 0;
   padding-left: 20px;
-  width: calc(20% - 100px);
+  width: calc(16.6666666667% - 100px);
   border-right: 1px solid #a6a6a6;
 }
-.premium_text .filter .list .list_item .item:first-child {
+.glasses_text .filter .list .list_item .item:first-child {
   border-left: 1px solid #a6a6a6;
+  border-right: 1px dashed #a6a6a6;
 }
-.premium_text .filter .list .list_item .item h4 {
+.glasses_text .filter .list .list_item .item:nth-child(2) h4 {
+  height: 16px;
+}
+.glasses_text .filter .list .list_item .item h4 {
   font-size: 1.6rem;
   font-weight: bold;
   margin-bottom: 20px;
 }
-.premium_text .filter .list .list_item .item ul li {
+.glasses_text .filter .list .list_item .item ul li {
   font-size: 1.6rem;
   padding: 5px 0;
 }
-.premium_text .filter .list .list_item .item ul li input {
+.glasses_text .filter .list .list_item .item ul li input {
   width: 14px;
   height: 14px;
 }
-.premium_text .filter .filter_btn {
+.glasses_text .filter .filter_btn {
   display: flex;
   justify-content: center;
   gap: 10px;
   padding: 20px 0;
 }
-.premium_text .filter .filter_btn button {
+.glasses_text .filter .filter_btn button {
   width: 185px;
   height: 55px;
   font-weight: 700;
   line-height: 55px;
   font-size: 1.8rem;
 }
-.premium_text .filter .filter_btn .reset {
+.glasses_text .filter .filter_btn .reset {
   border: 1px solid var(--color-orange);
 }
-.premium_text .filter .filter_btn .search {
+.glasses_text .filter .filter_btn .search {
   border: 1px solid var(--color-orange);
   background-color: var(--color-orange);
   color: #fff;
 }
 
-.premium_glasses_list {
+.glasses_glasses_list {
   /* inner */
 }
-.premium_glasses_list .inner {
+.glasses_glasses_list .inner {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 28px;
   /* item */
 }
-.premium_glasses_list .inner .item {
+.glasses_glasses_list .inner .item {
   width: 23.5%;
   position: relative;
   /* div */
 }
-.premium_glasses_list .inner .item figure {
+.glasses_glasses_list .inner .item figure {
   height: 32.5vh;
   border: 1px solid #a6a6a6;
 }
-.premium_glasses_list .inner .item figure:hover {
+.glasses_glasses_list .inner .item figure:hover {
   opacity: 0.5;
 }
-.premium_glasses_list .inner .item figure img {
+.glasses_glasses_list .inner .item figure img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.premium_glasses_list .inner .item div {
+.glasses_glasses_list .inner .item div {
   margin-top: 12px;
   font-size: 1.5rem;
   word-break: keep-all;
   /* pay*/
 }
-.premium_glasses_list .inner .item div h2 {
+.glasses_glasses_list .inner .item div h2 {
   font-weight: bold;
   margin-top: 8px;
   margin-bottom: 20px;
 }
-.premium_glasses_list .inner .item div .pay {
+.glasses_glasses_list .inner .item div .pay {
   display: flex;
   justify-content: flex-start;
   font-size: 1.8rem;
   font-weight: bold;
 }
-.premium_glasses_list .inner .item div .pay span {
+.glasses_glasses_list .inner .item div .pay span {
   color: var(--color-orange);
   margin-right: 5px;
 }
-.premium_glasses_list .inner .item div .sale {
+.glasses_glasses_list .inner .item div .sale {
   width: 46px;
   height: 23px;
   background-color: var(--color-red);
@@ -234,17 +238,31 @@
   text-align: center;
   margin-top: 15px;
 }
-.premium_glasses_list .inner .item div .heart {
+.glasses_glasses_list .inner .item div .heart {
   width: 35px;
   position: absolute;
   bottom: 20%;
   right: 0;
 }
-.premium_glasses_list .inner .item div .heart img {
+.glasses_glasses_list .inner .item div .heart img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-/* premium_glasses_list *//*# sourceMappingURL=Premium.css.map */
+/* premium_glasses_list */
+.glasses_number {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.glasses_number ul {
+  display: flex;
+  line-height: 22.5px;
+}
+.glasses_number ul li {
+  font-size: 15px;
+  width: 30px;
+  text-align: center;
+}/*# sourceMappingURL=item_glasses.css.map */

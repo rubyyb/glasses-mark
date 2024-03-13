@@ -1,5 +1,18 @@
 @charset "utf-8";
 
+html,body {
+    font-size: 62.5%;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+.mobile {display: none;}
+.mobile-767 {display: none;}
+.style_list_767 {display: none;}
+.inner {
+    max-width: 1400px;
+    width: calc(100% - 40px);
+    margin: 10rem auto;
+}
+
 .header {
     width: 100%;
     height: var(--header-height);
