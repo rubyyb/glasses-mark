@@ -52,9 +52,12 @@ html,body {font-size: 62.5%;}
             gap: 28px;
             .item {
                 width: 7.5%;
-                figure.on {
-                    border: 1px solid #333;
+                figure {
                     border-radius: 50%;
+                    &:hover {
+                        border: 1px solid #333;
+                        transition: all 5s 0.1s;
+                    }
                 }
                 img {
                     width: 100%;

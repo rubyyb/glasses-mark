@@ -7,11 +7,10 @@
     <link rel="stylesheet" href="css/Premium.css">
     <link rel="stylesheet" href="css/Premium.scss">
 
-    <script src="js/main.js"></script>
-
     <script src="lib/jquery-3.7.1.min.js"></script>
     <script src="lib/jquery-ui.min.js"></script>
-
+    <script src="js/main.js"></script>
+    <script src="js/premium.js"></script>
     <script>
         $(function(){
             $('a').click(function(e){
@@ -19,16 +18,6 @@
                     e.preventDefault();
                 }
             })
-            let premiumText = $('.premium_text');
-            let filterTitle = $('.premium_text .filter .filter_title a');
-            let filterList = $('.premium_text .filter .list');
-
-            filterTitle.click(function(){
-                //alert();
-                filterList.toggleClass('on');
-            })
-
-            let premium_menu = $('')
         })
     </script>
 </head>
@@ -163,34 +152,44 @@
                 <div class="premium_menu_list">
                     <div class="list">
                         <div class="item">
-                            <figure>
-                                <img src="img/mobile_glasses_frema_라운드.png" alt="안경리스트-라운드">
-                            </figure>
-                            <p>라운드</p>
+                            <a href="#">
+                                <figure>
+                                    <img src="img/mobile_glasses_frema_라운드.png" alt="안경리스트-라운드">
+                                </figure>
+                                <p>라운드</p>
+                            </a>
                         </div><!-- item -->
                         <div class="item">
-                            <figure>
-                                <img src="img/mobile_glasses_frema_스퀘어.png" alt="안경리스트-스퀘어">
-                            </figure>
-                            <p>스퀘어</p>
+                            <a href="#">
+                                <figure>
+                                    <img src="img/mobile_glasses_frema_스퀘어.png" alt="안경리스트-스퀘어">
+                                </figure>
+                                <p>스퀘어</p>
+                            </a>
                         </div><!-- item -->
                         <div class="item">
-                            <figure>
-                                <img src="img/mobile_glasses_frema_다각형.png" alt="안경리스트-다각형">
-                            </figure>
-                            <p>다각형</p>
+                            <a href="#">
+                                <figure>
+                                    <img src="img/mobile_glasses_frema_다각형.png" alt="안경리스트-다각형">
+                                </figure>
+                                <p>다각형</p>
+                            </a>
                         </div><!-- item -->
                         <div class="item">
-                            <figure>
-                                <img src="img/mobile_glasses_frema_하금테.png" alt="안경리스트-하금테">
-                            </figure>
-                            <p>하금테</p>
+                            <a href="#">
+                                <figure>
+                                    <img src="img/mobile_glasses_frema_하금테.png" alt="안경리스트-하금테">
+                                </figure>
+                                <p>하금테</p>
+                            </a>
                         </div><!-- item -->
                         <div class="item">
-                            <figure>
-                                <img src="img/mobile_glasses_frema_보잉.png" alt="안경리스트-보잉">
-                            </figure>
-                            <p>보잉</p>
+                            <a href="#">
+                                <figure>
+                                    <img src="img/mobile_glasses_frema_보잉.png" alt="안경리스트-보잉">
+                                </figure>
+                                <p>보잉</p>
+                            </a>
                         </div><!-- item -->
                     </div><!-- inner -->
                 </div><!-- premium_menu_list -->

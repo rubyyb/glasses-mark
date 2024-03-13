@@ -61,9 +61,12 @@ html, body {
 .premium_menu .premium_menu_list .list .item {
   width: 7.5%;
 }
-.premium_menu .premium_menu_list .list .item figure.on {
-  border: 1px solid #333;
+.premium_menu .premium_menu_list .list .item figure {
   border-radius: 50%;
+}
+.premium_menu .premium_menu_list .list .item figure:hover {
+  border: 1px solid #333;
+  transition: all 5s 0.1s;
 }
 .premium_menu .premium_menu_list .list .item img {
   width: 100%;
