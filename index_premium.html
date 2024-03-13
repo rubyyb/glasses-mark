@@ -9,6 +9,28 @@
 
     <script src="js/main.js"></script>
 
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script src="lib/jquery-ui.min.js"></script>
+
+    <script>
+        $(function(){
+            $('a').click(function(e){
+                if($(this).attr("href") == "#") {
+                    e.preventDefault();
+                }
+            })
+            let premiumText = $('.premium_text');
+            let filterTitle = $('.premium_text .filter .filter_title a');
+            let filterList = $('.premium_text .filter .list');
+
+            filterTitle.click(function(){
+                //alert();
+                filterList.toggleClass('on');
+            })
+
+            let premium_menu = $('')
+        })
+    </script>
 </head>
 <body>
     <div id="wrap">
@@ -142,31 +164,31 @@
                     <div class="list">
                         <div class="item">
                             <figure>
-                                <img src="img/mobile_glasses_frema_라운드.png" alt="">
+                                <img src="img/mobile_glasses_frema_라운드.png" alt="안경리스트-라운드">
                             </figure>
                             <p>라운드</p>
                         </div><!-- item -->
                         <div class="item">
                             <figure>
-                                <img src="img/mobile_glasses_frema_스퀘어.png" alt="">
+                                <img src="img/mobile_glasses_frema_스퀘어.png" alt="안경리스트-스퀘어">
                             </figure>
                             <p>스퀘어</p>
                         </div><!-- item -->
                         <div class="item">
                             <figure>
-                                <img src="img/mobile_glasses_frema_다각형.png" alt="">
+                                <img src="img/mobile_glasses_frema_다각형.png" alt="안경리스트-다각형">
                             </figure>
                             <p>다각형</p>
                         </div><!-- item -->
                         <div class="item">
                             <figure>
-                                <img src="img/mobile_glasses_frema_하금테.png" alt="">
+                                <img src="img/mobile_glasses_frema_하금테.png" alt="안경리스트-하금테">
                             </figure>
                             <p>하금테</p>
                         </div><!-- item -->
                         <div class="item">
                             <figure>
-                                <img src="img/mobile_glasses_frema_보잉.png" alt="">
+                                <img src="img/mobile_glasses_frema_보잉.png" alt="안경리스트-보잉">
                             </figure>
                             <p>보잉</p>
                         </div><!-- item -->
@@ -175,15 +197,15 @@
             </section><!-- premium_menu -->
 
             <section class="premium_text">
-                <div class="inner">
-                    <div class="title">
-                        <p>프리미엄</p>
-                    </div>
-                    <div class="filter">
-                        <div class="filter_title">
-                            <button>FILTER +</button>
-                        </div><!-- title -->
-                        <div class="list">
+                <div class="title">
+                    <p>프리미엄</p>
+                </div>
+                <div class="filter">
+                    <div class="filter_title">
+                        <a href="#"><button>FILTER +</button></a>
+                    </div><!-- title -->
+                    <div class="list">
+                        <div class="list_item">
                             <div class="item">
                                 <h4>브랜드</h4>
                                 <ul>
@@ -205,7 +227,6 @@
                                     </li>
                                 </ul>
                             </div><!-- brand -->
-
                             <div class="item">
                                 <h4>모양</h4>
                                 <ul>
@@ -319,352 +340,394 @@
                                 </ul>
                             </div><!-- brand -->
                         </div><!-- list -->
-                    </div><!-- filter -->
-                </div><!-- premium_color -->
+                        <div class="filter_btn">
+                            <a href="#"><button class="reset">초기화</button></a>
+                            <a href="#"><button class="search">필터검색</button></a>
+                        </div><!-- filter_btn end -->
+                    </div>
+                </div><!-- filter -->
             </section><!-- premium_text -->
 
             <section class="premium_glasses_list">
                 <div class="inner">
                     <div class="item">
-                        <figure>
-                            <img src="img/premium_page_glasses01.jpg" alt="">
-                        </figure>
-                        <div>
-                            <p>레이벤</p>
-                            <h2>[온라인 행사가] 레이벤 메탈 3447 53 size (4Color)</h2>
-                            <div class="pay">
-                                <p><span>52%</span></p>
-                                <p>100,000원</p>
-                            </div><!-- pay end -->
-                            <button class="sale">SALE</button>
-                            <button class="heart">
-                                <img src="img/heart.png" alt="">
-                            </button>
-                        </div>
+                        <a href="#">
+                            <figure>
+                                <img src="img/premium_page_glasses01.jpg" alt="">
+                            </figure>
+                            <div>
+                                <p>레이벤</p>
+                                <h2>[온라인 행사가] 레이벤 메탈 3447 53 size (4Color)</h2>
+                                <div class="pay">
+                                    <p><span>52%</span></p>
+                                    <p>100,000원</p>
+                                </div><!-- pay end -->
+                                <button class="sale">SALE</button>
+                                <button class="heart">
+                                    <img src="img/heart.png" alt="">
+                                </button>
+                            </div>
+                        </a>
                     </div><!-- item -->
 
                     <div class="item">
-                        <figure>
-                            <img src="img/premium_page_glasses02.jpg" alt="">
-                        </figure>
-                        <div>
-                            <p>레이벤</p>
-                            <h2>[온라인 행사가] 레이벤 클럽마스터 3016F 55 size (2Color)</h2>
-                            <div class="pay">
-                                <p><span>52%</span></p>
-                                <p>100,000원</p>
-                            </div><!-- pay end -->
-                            <button class="sale">SALE</button>
-                            <button class="heart">
-                                <img src="img/heart.png" alt="">
-                            </button>
-                        </div>
+                        <a href="#">
+                            <figure>
+                                <img src="img/premium_page_glasses02.jpg" alt="">
+                            </figure>
+                            <div>
+                                <p>레이벤</p>
+                                <h2>[온라인 행사가] 레이벤 클럽마스터 3016F 55 size (2Color)</h2>
+                                <div class="pay">
+                                    <p><span>52%</span></p>
+                                    <p>100,000원</p>
+                                </div><!-- pay end -->
+                                <button class="sale">SALE</button>
+                                <button class="heart">
+                                    <img src="img/heart.png" alt="">
+                                </button>
+                            </div>
+                        </a>
                     </div><!-- item -->
 
                     <div class="item">
-                        <figure>
-                            <img src="img/premium_page_glasses04.jpg" alt="">
-                        </figure>
-                        <div>
-                            <p>크랍시스</p>
-                            <h2>크랍시스 CRF-148 (1Color)</h2>
-                            <div class="pay">
-                                <p><span>39%</span></p>
-                                <p>360,000원</p>
-                            </div><!-- pay end -->
-                            <button class="sale">SALE</button>
-                            <button class="heart">
-                                <img src="img/heart.png" alt="">
-                            </button>
-                        </div>
+                        <a href="#">
+                            <figure>
+                                <img src="img/premium_page_glasses04.jpg" alt="">
+                            </figure>
+                            <div>
+                                <p>크랍시스</p>
+                                <h2>크랍시스 CRF-148 (1Color)</h2>
+                                <div class="pay">
+                                    <p><span>39%</span></p>
+                                    <p>360,000원</p>
+                                </div><!-- pay end -->
+                                <button class="sale">SALE</button>
+                                <button class="heart">
+                                    <img src="img/heart.png" alt="">
+                                </button>
+                            </div>
+                        </a>
                     </div><!-- item -->
 
                     <div class="item">
-                        <figure>
-                            <img src="img/premium_page_glasses03.jpg" alt="">
-                        </figure>
-                        <div>
-                            <p>레이벤</p>
-                            <h2>[온라인 행사가] 레이벤 클럽마스터 3016F 51 size (2Color)</h2>
-                            <div class="pay">
-                                <p><span>52%</span></p>
-                                <p>100,000원</p>
-                            </div><!-- pay end -->
-                            <button class="sale">SALE</button>
-                            <button class="heart">
-                                <img src="img/heart.png" alt="">
-                            </button>
-                        </div>
+                        <a href="#">
+                            <figure>
+                                <img src="img/premium_page_glasses03.jpg" alt="">
+                            </figure>
+                            <div>
+                                <p>레이벤</p>
+                                <h2>[온라인 행사가] 레이벤 클럽마스터 3016F 51 size (2Color)</h2>
+                                <div class="pay">
+                                    <p><span>52%</span></p>
+                                    <p>100,000원</p>
+                                </div><!-- pay end -->
+                                <button class="sale">SALE</button>
+                                <button class="heart">
+                                    <img src="img/heart.png" alt="">
+                                </button>
+                            </div>
+                        </a>
                     </div><!-- item -->
 
                     <div class="item">
-                        <figure>
-                            <img src="img/premium_page_glasses05.jpg" alt="">
-                        </figure>
-                        <div>
-                            <p>크랍시스</p>
-                            <h2>크랍시스 CRF-147 (1Color)</h2>
-                            <div class="pay">
-                                <p><span>39%</span></p>
-                                <p>360,000원</p>
-                            </div><!-- pay end -->
-                            <button class="sale">SALE</button>
-                            <button class="heart">
-                                <img src="img/heart.png" alt="">
-                            </button>
-                        </div>
+                        <a href="#">
+                            <figure>
+                                <img src="img/premium_page_glasses05.jpg" alt="">
+                            </figure>
+                            <div>
+                                <p>크랍시스</p>
+                                <h2>크랍시스 CRF-147 (1Color)</h2>
+                                <div class="pay">
+                                    <p><span>39%</span></p>
+                                    <p>360,000원</p>
+                                </div><!-- pay end -->
+                                <button class="sale">SALE</button>
+                                <button class="heart">
+                                    <img src="img/heart.png" alt="">
+                                </button>
+                            </div>
+                        </a>
                     </div><!-- item -->
 
                     <div class="item">
-                        <figure>
-                            <img src="img/premium_page_glasses06.jpg" alt="">
-                        </figure>
-                        <div>
-                            <p>크랍시스</p>
-                            <h2>크랍시스 CRF-146 (4Color)</h2>
-                            <div class="pay">
-                                <p><span>39%</span></p>
-                                <p>360,000원</p>
-                            </div><!-- pay end -->
-                            <button class="sale">SALE</button>
-                            <button class="heart">
-                                <img src="img/heart.png" alt="">
-                            </button>
-                        </div>
+                        <a href="#">
+                            <figure>
+                                <img src="img/premium_page_glasses06.jpg" alt="">
+                            </figure>
+                            <div>
+                                <p>크랍시스</p>
+                                <h2>크랍시스 CRF-146 (4Color)</h2>
+                                <div class="pay">
+                                    <p><span>39%</span></p>
+                                    <p>360,000원</p>
+                                </div><!-- pay end -->
+                                <button class="sale">SALE</button>
+                                <button class="heart">
+                                    <img src="img/heart.png" alt="">
+                                </button>
+                            </div>
+                        </a>
                     </div><!-- item -->
 
                     <div class="item">
-                        <figure>
-                            <img src="img/premium_page_glasses07.jpg" alt="">
-                        </figure>
-                        <div>
-                            <p>크랍시스</p>
-                            <h2>크랍시스 CRF-144 (4Color)</h2>
-                            <div class="pay">
-                                <p><span>39%</span></p>
-                                <p>360,000원</p>
-                            </div><!-- pay end -->
-                            <button class="sale">SALE</button>
-                            <button class="heart">
-                                <img src="img/heart.png" alt="">
-                            </button>
-                        </div>
+                        <a href="#">
+                            <figure>
+                                <img src="img/premium_page_glasses07.jpg" alt="">
+                            </figure>
+                            <div>
+                                <p>크랍시스</p>
+                                <h2>크랍시스 CRF-144 (4Color)</h2>
+                                <div class="pay">
+                                    <p><span>39%</span></p>
+                                    <p>360,000원</p>
+                                </div><!-- pay end -->
+                                <button class="sale">SALE</button>
+                                <button class="heart">
+                                    <img src="img/heart.png" alt="">
+                                </button>
+                            </div>
+                        </a>
                     </div><!-- item -->
 
                     <div class="item">
-                        <figure>
-                            <img src="img/premium_page_glasses08.jpg" alt="">
-                        </figure>
-                        <div>
-                            <p>크랍시스</p>
-                            <h2>크랍시스 CRF-143 (4Color)</h2>
-                            <div class="pay">
-                                <p><span>39%</span></p>
-                                <p>360,000원</p>
-                            </div><!-- pay end -->
-                            <button class="sale">SALE</button>
-                            <button class="heart">
-                                <img src="img/heart.png" alt="">
-                            </button>
-                        </div>
+                        <a href="#">
+                            <figure>
+                                <img src="img/premium_page_glasses08.jpg" alt="">
+                            </figure>
+                            <div>
+                                <p>크랍시스</p>
+                                <h2>크랍시스 CRF-143 (4Color)</h2>
+                                <div class="pay">
+                                    <p><span>39%</span></p>
+                                    <p>360,000원</p>
+                                </div><!-- pay end -->
+                                <button class="sale">SALE</button>
+                                <button class="heart">
+                                    <img src="img/heart.png" alt="">
+                                </button>
+                            </div>
+                        </a>
                     </div><!-- item -->
 
                     <div class="item">
-                        <figure>
-                            <img src="img/premium_page_glasses09.jpg" alt="">
-                        </figure>
-                        <div>
-                            <p>크랍시스</p>
-                            <h2>크랍시스 CRF-137 (5Color)</h2>
-                            <div class="pay">
-                                <p><span>39%</span></p>
-                                <p>360,000원</p>
-                            </div><!-- pay end -->
-                            <button class="sale">SALE</button>
-                            <button class="heart">
-                                <img src="img/heart.png" alt="">
-                            </button>
-                        </div>
+                        <a href="#">
+                            <figure>
+                                <img src="img/premium_page_glasses09.jpg" alt="">
+                            </figure>
+                            <div>
+                                <p>크랍시스</p>
+                                <h2>크랍시스 CRF-137 (5Color)</h2>
+                                <div class="pay">
+                                    <p><span>39%</span></p>
+                                    <p>360,000원</p>
+                                </div><!-- pay end -->
+                                <button class="sale">SALE</button>
+                                <button class="heart">
+                                    <img src="img/heart.png" alt="">
+                                </button>
+                            </div>
+                        </a>
                     </div><!-- item -->
 
                     <div class="item">
-                        <figure>
-                            <img src="img/premium_page_glasses010.jpg" alt="">
-                        </figure>
-                        <div>
-                            <p>크랍시스</p>
-                            <h2>크랍시스 CRF-135 (6Color)</h2>
-                            <div class="pay">
-                                <p><span>39%</span></p>
-                                <p>360,000원</p>
-                            </div><!-- pay end -->
-                            <button class="sale">SALE</button>
-                            <button class="heart">
-                                <img src="img/heart.png" alt="">
-                            </button>
-                        </div>
+                        <a href="#">
+                            <figure>
+                                <img src="img/premium_page_glasses010.jpg" alt="">
+                            </figure>
+                            <div>
+                                <p>크랍시스</p>
+                                <h2>크랍시스 CRF-135 (6Color)</h2>
+                                <div class="pay">
+                                    <p><span>39%</span></p>
+                                    <p>360,000원</p>
+                                </div><!-- pay end -->
+                                <button class="sale">SALE</button>
+                                <button class="heart">
+                                    <img src="img/heart.png" alt="">
+                                </button>
+                            </div>
+                        </a>
                     </div><!-- item -->
 
                     <div class="item">
-                        <figure>
-                            <img src="img/premium_page_glasses011.jpg" alt="">
-                        </figure>
-                        <div>
-                            <p>크랍시스</p>
-                            <h2>크랍시스 CRF-134 (4Color)</h2>
-                            <div class="pay">
-                                <p><span>39%</span></p>
-                                <p>360,000원</p>
-                            </div><!-- pay end -->
-                            <button class="sale">SALE</button>
-                            <button class="heart">
-                                <img src="img/heart.png" alt="">
-                            </button>
-                        </div>
+                        <a href="#">
+                            <figure>
+                                <img src="img/premium_page_glasses011.jpg" alt="">
+                            </figure>
+                            <div>
+                                <p>크랍시스</p>
+                                <h2>크랍시스 CRF-134 (4Color)</h2>
+                                <div class="pay">
+                                    <p><span>39%</span></p>
+                                    <p>360,000원</p>
+                                </div><!-- pay end -->
+                                <button class="sale">SALE</button>
+                                <button class="heart">
+                                    <img src="img/heart.png" alt="">
+                                </button>
+                            </div>
+                        </a>
                     </div><!-- item -->
 
                     <div class="item">
-                        <figure>
-                            <img src="img/premium_page_glasses012.jpg" alt="">
-                        </figure>
-                        <div>
-                            <p>크랍시스</p>
-                            <h2>크랍시스 CRF-130 (3Color)</h2>
-                            <div class="pay">
-                                <p><span>39%</span></p>
-                                <p>360,000원</p>
-                            </div><!-- pay end -->
-                            <button class="sale">SALE</button>
-                            <button class="heart">
-                                <img src="img/heart.png" alt="">
-                            </button>
-                        </div>
+                        <a href="#">
+                            <figure>
+                                <img src="img/premium_page_glasses012.jpg" alt="">
+                            </figure>
+                            <div>
+                                <p>크랍시스</p>
+                                <h2>크랍시스 CRF-130 (3Color)</h2>
+                                <div class="pay">
+                                    <p><span>39%</span></p>
+                                    <p>360,000원</p>
+                                </div><!-- pay end -->
+                                <button class="sale">SALE</button>
+                                <button class="heart">
+                                    <img src="img/heart.png" alt="">
+                                </button>
+                            </div>
+                        </a>
                     </div><!-- item -->
 
                     <div class="item">
-                        <figure>
-                            <img src="img/premium_page_glasses013.jpg" alt="">
-                        </figure>
-                        <div>
-                            <p>O&X</p>
-                            <h2>O&X 411</h2>
-                            <div class="pay">
-                                <p><span>63%</span></p>
-                                <p>135,000원</p>
-                            </div><!-- pay end -->
-                            <button class="sale">SALE</button>
-                            <button class="heart">
-                                <img src="img/heart.png" alt="">
-                            </button>
-                        </div>
+                        <a href="#">
+                            <figure>
+                                <img src="img/premium_page_glasses013.jpg" alt="">
+                            </figure>
+                            <div>
+                                <p>O&X</p>
+                                <h2>O&X 411</h2>
+                                <div class="pay">
+                                    <p><span>63%</span></p>
+                                    <p>135,000원</p>
+                                </div><!-- pay end -->
+                                <button class="sale">SALE</button>
+                                <button class="heart">
+                                    <img src="img/heart.png" alt="">
+                                </button>
+                            </div>
+                        </a>
                     </div><!-- item -->
 
                     <div class="item">
-                        <figure>
-                            <img src="img/premium_page_glasses014.jpg" alt="">
-                        </figure>
-                        <div>
-                            <p>O&X</p>
-                            <h2>O&X 408</h2>
-                            <div class="pay">
-                                <p><span>63%</span></p>
-                                <p>135,000원</p>
-                            </div><!-- pay end -->
-                            <button class="sale">SALE</button>
-                            <button class="heart">
-                                <img src="img/heart.png" alt="">
-                            </button>
-                        </div>
+                        <a href="#">
+                            <figure>
+                                <img src="img/premium_page_glasses014.jpg" alt="">
+                            </figure>
+                            <div>
+                                <p>O&X</p>
+                                <h2>O&X 408</h2>
+                                <div class="pay">
+                                    <p><span>63%</span></p>
+                                    <p>135,000원</p>
+                                </div><!-- pay end -->
+                                <button class="sale">SALE</button>
+                                <button class="heart">
+                                    <img src="img/heart.png" alt="">
+                                </button>
+                            </div>
+                        </a>
                     </div><!-- item -->
 
                     <div class="item">
-                        <figure>
-                            <img src="img/premium_page_glasses015.jpg" alt="">
-                        </figure>
-                        <div>
-                            <p>O&X</p>
-                            <h2>O&X 288</h2>
-                            <div class="pay">
-                                <p><span>64%</span></p>
-                                <p>135,000원</p>
-                            </div><!-- pay end -->
-                            <button class="sale">SALE</button>
-                            <button class="heart">
-                                <img src="img/heart.png" alt="">
-                            </button>
-                        </div>
+                        <a href="#">
+                            <figure>
+                                <img src="img/premium_page_glasses015.jpg" alt="">
+                            </figure>
+                            <div>
+                                <p>O&X</p>
+                                <h2>O&X 288</h2>
+                                <div class="pay">
+                                    <p><span>64%</span></p>
+                                    <p>135,000원</p>
+                                </div><!-- pay end -->
+                                <button class="sale">SALE</button>
+                                <button class="heart">
+                                    <img src="img/heart.png" alt="">
+                                </button>
+                            </div>
+                        </a>
                     </div><!-- item -->
 
                     <div class="item">
-                        <figure>
-                            <img src="img/premium_page_glasses016.jpg" alt="">
-                        </figure>
-                        <div>
-                            <p>O&X</p>
-                            <h2>O&X 288</h2>
-                            <div class="pay">
-                                <p><span>64%</span></p>
-                                <p>135,000원</p>
-                            </div><!-- pay end -->
-                            <button class="sale">SALE</button>
-                            <button class="heart">
-                                <img src="img/heart.png" alt="">
-                            </button>
-                        </div>
+                        <a href="#">
+                            <figure>
+                                <img src="img/premium_page_glasses016.jpg" alt="">
+                            </figure>
+                            <div>
+                                <p>O&X</p>
+                                <h2>O&X 288</h2>
+                                <div class="pay">
+                                    <p><span>64%</span></p>
+                                    <p>135,000원</p>
+                                </div><!-- pay end -->
+                                <button class="sale">SALE</button>
+                                <button class="heart">
+                                    <img src="img/heart.png" alt="">
+                                </button>
+                            </div>
+                        </a>
                     </div><!-- item -->
 
                     <div class="item">
-                        <figure>
-                            <img src="img/premium_page_glasses017.jpg" alt="">
-                        </figure>
-                        <div>
-                            <p>O&X</p>
-                            <h2>O&X 234A</h2>
-                            <div class="pay">
-                                <p><span>62%</span></p>
-                                <p>135,000원</p>
-                            </div><!-- pay end -->
-                            <button class="sale">SALE</button>
-                            <button class="heart">
-                                <img src="img/heart.png" alt="">
-                            </button>
-                        </div>
+                        <a href="#">
+                            <figure>
+                                <img src="img/premium_page_glasses017.jpg" alt="">
+                            </figure>
+                            <div>
+                                <p>O&X</p>
+                                <h2>O&X 234A</h2>
+                                <div class="pay">
+                                    <p><span>62%</span></p>
+                                    <p>135,000원</p>
+                                </div><!-- pay end -->
+                                <button class="sale">SALE</button>
+                                <button class="heart">
+                                    <img src="img/heart.png" alt="">
+                                </button>
+                            </div>
+                        </a>
                     </div><!-- item -->
 
                     <div class="item">
-                        <figure>
-                            <img src="img/premium_page_glasses018.jpg" alt="">
-                        </figure>
-                        <div>
-                            <p>에스까다 (ESCADA)</p>
-                            <h2>[특별행사가]에스까다 선글라스 SES B52G</h2>
-                            <div class="pay">
-                                <p><span>65%</span></p>
-                                <p>154,000원</p>
-                            </div><!-- pay end -->
-                            <button class="sale">SALE</button>
-                            <button class="heart">
-                                <img src="img/heart.png" alt="">
-                            </button>
-                        </div>
+                        <a href="#">
+                            <figure>
+                                <img src="img/premium_page_glasses018.jpg" alt="">
+                            </figure>
+                            <div>
+                                <p>에스까다 (ESCADA)</p>
+                                <h2>[특별행사가]에스까다 선글라스 SES B52G</h2>
+                                <div class="pay">
+                                    <p><span>65%</span></p>
+                                    <p>154,000원</p>
+                                </div><!-- pay end -->
+                                <button class="sale">SALE</button>
+                                <button class="heart">
+                                    <img src="img/heart.png" alt="">
+                                </button>
+                            </div>
+                        </a>
                     </div><!-- item -->
 
                     <div class="item">
-                        <figure>
-                            <img src="img/premium_page_glasses019.jpg" alt="">
-                        </figure>
-                        <div>
-                            <p>에스까다 (ESCADA)</p>
-                            <h2>[특별행사가]에스까다 선글라스 SES B50G</h2>
-                            <div class="pay">
-                                <p><span>63%</span></p>
-                                <p>154,000원</p>
-                            </div><!-- pay end -->
-                            <button class="sale">SALE</button>
-                            <button class="heart">
-                                <img src="img/heart.png" alt="">
-                            </button>
-                        </div>
+                        <a href="#">
+                            <figure>
+                                <img src="img/premium_page_glasses019.jpg" alt="">
+                            </figure>
+                            <div>
+                                <p>에스까다 (ESCADA)</p>
+                                <h2>[특별행사가]에스까다 선글라스 SES B50G</h2>
+                                <div class="pay">
+                                    <p><span>63%</span></p>
+                                    <p>154,000원</p>
+                                </div><!-- pay end -->
+                                <button class="sale">SALE</button>
+                                <button class="heart">
+                                    <img src="img/heart.png" alt="">
+                                </button>
+                            </div>
+                        </a>
                     </div><!-- item -->
                 </div><!-- list -->
             </section><!-- premium_glasses_list -->

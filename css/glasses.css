@@ -19,6 +19,7 @@
 
 html, body {
   font-size: 62.5%;
+  font-family: "Nanum Gothic", sans-serif;
 }
 
 .mobile {
@@ -99,7 +100,7 @@ html, body {
   display: flex;
   justify-content: space-between;
   margin-top: 3rem;
-  gap: 20px;
+  gap: 28px;
 }
 .main .style .style_inner .list .swiper-slide {
   width: 15.71%;

@@ -4,7 +4,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.4509803922);
+  background-color: #FFF;
+  border-bottom: 1px solid var(--color-orange);
   z-index: 9999;
   /* inner end */
 }
@@ -79,7 +80,17 @@
 /* header end */
 .footer {
   padding: 20px 0;
+  position: relative;
   /* inner */
+}
+.footer::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #333;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .footer .inner {
   margin: 0 auto;
