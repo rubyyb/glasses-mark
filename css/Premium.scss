@@ -246,3 +246,45 @@
         }/* item */
     }/* inner */
 }/* premium_glasses_list */
+
+@media screen and (max-width:1240px) {
+    .premium_main_visual {margin: 70px auto;}
+}
+
+@media screen and (max-width:767px) {
+    .premium_main_visual {
+        margin-bottom: 50px;
+    }
+    .premium_text .filter .list .list_item {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .item {
+            width: calc(100% / 3);
+            border-bottom: 1px solid #a6a6a6;
+        }
+    }
+    .premium_text .filter .list .list_item .item:first-child {
+        border-left: 0;
+    }
+    .premium_glasses_list .inner {
+        justify-content: space-between;
+    }
+    .premium_glasses_list .inner .item {
+        width: 48%;
+    }
+    .premium_menu .premium_menu_list .list {
+        flex-wrap: wrap;
+    }
+    .premium_menu .premium_menu_list .list .item {
+        width: 23.5%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .premium_glasses_list .inner .item {
+        width: 100%;
+    }
+    .premium_menu .premium_menu_list .list .item {
+        width: 20.5%;
+    }
+}

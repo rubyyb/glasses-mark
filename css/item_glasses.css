@@ -269,4 +269,46 @@
 }
 .glasses_number ul li.on {
   color: #333;
+}
+
+@media screen and (max-width: 1240px) {
+  .glasses_main_visual {
+    margin: 70px auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .glasses_main_visual {
+    margin-bottom: 50px;
+  }
+  .glasses_text .filter .list .list_item {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .glasses_text .filter .list .list_item .item {
+    width: 33.3333333333%;
+    border-bottom: 1px solid #a6a6a6;
+  }
+  .glasses_text .filter .list .list_item .item:first-child {
+    border-left: 0;
+  }
+  .glasses_glasses_list .inner {
+    justify-content: space-between;
+  }
+  .glasses_glasses_list .inner .item {
+    width: 48%;
+  }
+  .glasses_menu .glasses_menu_list .list {
+    flex-wrap: wrap;
+  }
+  .glasses_menu .glasses_menu_list .list .item {
+    width: 23.5%;
+  }
+}
+@media screen and (max-width: 414px) {
+  .glasses_glasses_list .inner .item {
+    width: 100%;
+  }
+  .glasses_menu .glasses_menu_list .list .item {
+    width: 20.5%;
+  }
 }/*# sourceMappingURL=item_glasses.css.map */
