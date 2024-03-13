@@ -262,6 +262,10 @@
             font-size: 15px;
             width: 30px;
             text-align: center;
+            color: #a6a6a6;
+            &.on {
+                color: #333;
+            }
         }
     }
 }

@@ -265,4 +265,8 @@
   font-size: 15px;
   width: 30px;
   text-align: center;
+  color: #a6a6a6;
+}
+.glasses_number ul li.on {
+  color: #333;
 }/*# sourceMappingURL=item_glasses.css.map */
