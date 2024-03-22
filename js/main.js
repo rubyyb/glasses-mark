@@ -29,6 +29,18 @@ $(function(){
             })
         }
 
+    //팝업
+    let popupBtn = $('.popup > button');
+    let popupBg = $('.popup_bg');
+
+    popupBtn.click(function(){
+        $('.popup').css({
+            'display' : 'none'
+        })
+        popupBg.css({
+            'display' : 'none'
+        })
+    })
 
     //프리미엄 아이웨어 탭메뉴
     let mobileMenu = $('.glasses_menu .inner .tab_menu li');
