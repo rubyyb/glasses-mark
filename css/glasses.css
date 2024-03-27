@@ -695,6 +695,7 @@ html, body {
   }
   .main .main_visual .mySwiper .swiper-slide {
     height: 62.75vh;
+    padding-top: 2rem;
   }
   .main .style .style_inner {
     margin: 2.5rem auto;
